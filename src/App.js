@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { userContext } from "./helpers/userContext";
-import SignUpPage from "./components/SignUp/SignUpPage";
+import SignupPage from "./components/Signup/SignupPage";
 import "./App.css";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   return (
     <userContext.Provider value={{ user, setUser }}>
       <div className='App'>
-        <SignUpPage />
+        <SignupPage />
       </div>
     </userContext.Provider>
   );

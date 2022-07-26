@@ -1,10 +1,13 @@
-import SignUpForm from "./SignUpForm";
-const SignUpPage = () => {
+import SignupHeader from "./SignupHeader";
+import SignupForm from "./SignupForm";
+import "./Signup.css";
+const SignupPage = () => {
   return (
-    <main>
-      <SignUpForm />
-    </main>
+    <div>
+      <SignupHeader />
+      <SignupForm />
+    </div>
   );
 };
 
-export default SignUpPage;
+export default SignupPage;

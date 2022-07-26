@@ -1,60 +1,55 @@
 import { useContext } from "react";
 import { userContext } from "../../helpers/userContext";
 import client from "../../helpers/client";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+import SignupFormInput from "./SignupFormInput";
 
-const SignUpForm = () => {
+const SignupForm = () => {
   const { user, setUser } = useContext(userContext);
 
   const handleUserData = (e) => {
-    e.preventDefault();
     const { name, value } = e.target;
+    console.log("value", user);
     setUser({ ...user, [name]: value });
   };
 
-  const handleSubmit = () => {
-    client.post("/user/signup", user);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    client
+      .post("/user/signup", user)
+      .then((res) => console.log("whats this", res.data));
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <TextField
-        className='signup-form-input'
-        label='User Name'
-        variant='outlined'
-        name='userName'
-        onChange={handleUserData}
-      />
-      <TextField
-        className='signup-form-input'
-        label='Email Address'
-        variant='outlined'
-        name='email'
-        type='email'
-        onChange={handleUserData}
-      />
-      <TextField
-        className='signup-form-input'
-        label='Password'
-        variant='outlined'
-        name='password'
-        type='password'
-        onChange={handleUserData}
-      />
-      <TextField
-        className='signup-form-input'
-        label='Confirm Password'
-        variant='outlined'
-        name='confirmPassword'
-        type='password'
-        onChange={handleUserData}
-      />
-      <Button id='signup-submit-button' type='submit' variant='contained'>
-        Submit
-      </Button>
-    </form>
+    <main>
+      <form onSubmit={handleSubmit}>
+        <SignupFormInput
+          name={"userName"}
+          type={"text"}
+          value={user.userName}
+          handleUserData={handleUserData}
+        />
+        <SignupFormInput
+          name={"email"}
+          type={"email"}
+          value={user.email}
+          handleUserData={handleUserData}
+        />
+        <SignupFormInput
+          name={"password"}
+          type={"password"}
+          value={user.password}
+          handleUserData={handleUserData}
+        />
+        <SignupFormInput
+          name={"confirmPassword"}
+          type={"password"}
+          value={user.confirmPassword}
+          handleUserData={handleUserData}
+        />
+        <input className='signup-submit-btn' type='submit' />
+      </form>
+    </main>
   );
 };
 
-export default SignUpForm;
+export default SignupForm;
