@@ -1,4 +1,4 @@
-const SignupFormInput = ({
+const FormInput = ({
   label,
   name,
   type,
@@ -22,4 +22,4 @@ const SignupFormInput = ({
   );
 };
 
-export default SignupFormInput;
+export default FormInput;

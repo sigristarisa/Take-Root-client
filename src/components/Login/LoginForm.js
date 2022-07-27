@@ -2,9 +2,9 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userContext } from "../../helpers/userContext";
 import client from "../../helpers/client";
-import FormInput from "./FormInput";
+import FormInput from "../Signup/FormInput";
 
-const SignupForm = () => {
+const LoginForm = () => {
   const { user, setUser } = useContext(userContext);
   const navigate = useNavigate();
 
@@ -15,7 +15,8 @@ const SignupForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    client.post("/user/signup", user).then((res) => {
+    client.post("/user/login", user).then((res) => {
+      console.log("whats the response: ", res.data);
       localStorage.setItem("token", res.data.token);
       setUser(res.data);
       navigate("../home", { replace: true });
@@ -26,15 +27,7 @@ const SignupForm = () => {
     <main>
       <form onSubmit={handleSubmit}>
         <FormInput
-          label={"Choose your username"}
-          name={"userName"}
-          type={"text"}
-          value={user.userName}
-          placeholder={"bunsenhoneydew"}
-          handleUserData={handleUserData}
-        />
-        <FormInput
-          label={"What is your Email address"}
+          label={"Email address"}
           name={"email"}
           type={"email"}
           value={user.email}
@@ -49,18 +42,10 @@ const SignupForm = () => {
           placeholder={"Something safe!"}
           handleUserData={handleUserData}
         />
-        <FormInput
-          label={"Confirm password"}
-          name={"confirmPassword"}
-          type={"password"}
-          value={user.confirmPassword}
-          placeholder={"Are you sure?"}
-          handleUserData={handleUserData}
-        />
-        <input className='signup-submit-btn' type='submit' />
+        <input className='signup-submit-btn' type='submit' value='Log In' />
       </form>
     </main>
   );
 };
 
-export default SignupForm;
+export default LoginForm;
