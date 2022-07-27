@@ -1,22 +1,14 @@
-const FormInput = ({
-  label,
-  name,
-  type,
-  value,
-  placeholder,
-  handleUserData,
-}) => {
+const FormInput = ({ label, name, type, value, placeholder, handleChange }) => {
   return (
     <div>
       <label htmlFor={name}>{label}</label>
       <input
-        className='signup-form-input'
         id={name}
         name={name}
         type={type}
         value={value}
         placeholder={placeholder}
-        onChange={handleUserData}
+        onChange={handleChange}
       />
     </div>
   );

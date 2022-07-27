@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { squareContext } from "../../helpers/createContext";
+import FormInput from "../Signup/FormInput";
 const SquaresCalculator = () => {
   const { square, setSquare } = useContext(squareContext);
   const [size, setSize] = useState({ length: 0, height: 0, unit: "" });
@@ -18,7 +19,7 @@ const SquaresCalculator = () => {
     setSquare({ row, column });
   };
 
-  const handleSize = async (e) => {
+  const handleSize = (e) => {
     const { name, value } = e.target;
     setSize({ ...size, [name]: value });
   };
@@ -37,29 +38,29 @@ const SquaresCalculator = () => {
         Choose the size that is the closest to your raised bed. As we are
         working with the companion method, one square will be around 30cm/1foot.{" "}
       </p>
-      <label htmlFor='length'>Length</label>
       <form onSubmit={submitSize}>
-        <input
-          id='length'
+        <FormInput
+          label='Length'
           name='length'
           type='number'
           value={size.length}
-          onChange={handleSize}
+          placeholder='100'
+          handleChange={handleSize}
         />
-        <label htmlFor='height'>Height</label>
-        <input
-          id='height'
+        <FormInput
+          label='Height'
           name='height'
           type='number'
           value={size.height}
-          onChange={handleSize}
+          placeholder='100'
+          handleChange={handleSize}
         />
         <select name='unit' onChange={handleSize}>
           <option>...</option>
           <option value='cm'>cm</option>
           <option value='feet'>feet</option>
         </select>
-        <input type='submit' />
+        <input type='submit' value='Preview' />
       </form>
     </section>
   );

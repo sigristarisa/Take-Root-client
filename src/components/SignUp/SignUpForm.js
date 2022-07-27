@@ -31,7 +31,7 @@ const SignupForm = () => {
           type={"text"}
           value={user.userName}
           placeholder={"bunsenhoneydew"}
-          handleUserData={handleUserData}
+          handleChange={handleUserData}
         />
         <FormInput
           label={"What is your Email address"}
@@ -39,7 +39,7 @@ const SignupForm = () => {
           type={"email"}
           value={user.email}
           placeholder={"honeydew@melon.com"}
-          handleUserData={handleUserData}
+          handleChange={handleUserData}
         />
         <FormInput
           label={"Choose your password"}
@@ -47,7 +47,7 @@ const SignupForm = () => {
           type={"password"}
           value={user.password}
           placeholder={"Something safe!"}
-          handleUserData={handleUserData}
+          handleChange={handleUserData}
         />
         <FormInput
           label={"Confirm password"}
@@ -55,7 +55,7 @@ const SignupForm = () => {
           type={"password"}
           value={user.confirmPassword}
           placeholder={"Are you sure?"}
-          handleUserData={handleUserData}
+          handleChange={handleUserData}
         />
         <button onClick={() => navigate("../", { replace: true })}>
           No, register later

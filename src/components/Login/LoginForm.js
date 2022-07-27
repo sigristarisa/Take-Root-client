@@ -31,7 +31,7 @@ const LoginForm = () => {
           type={"email"}
           value={user.email}
           placeholder={"honeydew@melon.com"}
-          handleUserData={handleUserData}
+          handleChange={handleUserData}
         />
         <FormInput
           label={"Choose your password"}
@@ -39,7 +39,7 @@ const LoginForm = () => {
           type={"password"}
           value={user.password}
           placeholder={"Something safe!"}
-          handleUserData={handleUserData}
+          handleChange={handleUserData}
         />
         <button onClick={() => navigate("../", { replace: true })}>
           No, login later
