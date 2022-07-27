@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { userContext } from "../../helpers/userContext";
+import { userContext } from "../../helpers/createContext";
 import client from "../../helpers/client";
 import FormInput from "./FormInput";
 
@@ -57,7 +57,14 @@ const SignupForm = () => {
           placeholder={"Are you sure?"}
           handleUserData={handleUserData}
         />
-        <input className='signup-submit-btn' type='submit' />
+        <button onClick={() => navigate("../", { replace: true })}>
+          No, register later
+        </button>
+        <input
+          className='signup-submit-btn'
+          type='submit'
+          value='Register now'
+        />
       </form>
     </main>
   );

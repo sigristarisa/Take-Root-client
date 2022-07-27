@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { userContext } from "./helpers/userContext";
+import { userContext, squareContext } from "./helpers/createContext";
 import LandingPage from "./components/LandingPage/LandingPage";
 import SignupPage from "./components/Signup/SignupPage";
 import LoginPage from "./components/Login/LoginPage";
 import MainPage from "./components/MainPage/MainPage";
+import CreateSquaresPage from "./components/CreateSquares/CreateSquaresPage";
 import "./App.css";
 
 function App() {
@@ -16,16 +17,27 @@ function App() {
     userImage: "",
   });
 
+  const [square, setSquare] = useState({
+    row: 0,
+    column: 0,
+  });
+
   return (
     <userContext.Provider value={{ user, setUser }}>
-      <div className='App'>
-        <Routes>
-          <Route path={"/"} element={<LandingPage />} />
-          <Route path={"/signup"} element={<SignupPage />} />
-          <Route path={"/login"} element={<LoginPage />} />
-          <Route path={"/home"} element={<MainPage />} />
-        </Routes>
-      </div>
+      <squareContext.Provider value={{ square, setSquare }}>
+        <div className='App'>
+          <Routes>
+            <Route path={"/"} element={<LandingPage />} />
+            <Route path={"/signup"} element={<SignupPage />} />
+            <Route path={"/login"} element={<LoginPage />} />
+            <Route path={"/home"} element={<MainPage />} />
+            <Route
+              path={"/create-raised-bed"}
+              element={<CreateSquaresPage />}
+            />
+          </Routes>
+        </div>
+      </squareContext.Provider>
     </userContext.Provider>
   );
 }

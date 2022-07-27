@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { userContext } from "../../helpers/userContext";
+import { userContext } from "../../helpers/createContext";
 import client from "../../helpers/client";
 import FormInput from "../Signup/FormInput";
 
@@ -16,7 +16,6 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     client.post("/user/login", user).then((res) => {
-      console.log("whats the response: ", res.data);
       localStorage.setItem("token", res.data.token);
       setUser(res.data);
       navigate("../home", { replace: true });
@@ -42,7 +41,10 @@ const LoginForm = () => {
           placeholder={"Something safe!"}
           handleUserData={handleUserData}
         />
-        <input className='signup-submit-btn' type='submit' value='Log In' />
+        <button onClick={() => navigate("../", { replace: true })}>
+          No, login later
+        </button>
+        <input className='signup-submit-btn' type='submit' value='Login' />
       </form>
     </main>
   );
