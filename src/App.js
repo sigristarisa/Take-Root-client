@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import { userContext } from "./helpers/userContext";
 import SignupPage from "./components/Signup/SignupPage";
+import MainPage from "./components/MainPage/MainPage";
 import "./App.css";
 
 function App() {
@@ -15,7 +17,10 @@ function App() {
   return (
     <userContext.Provider value={{ user, setUser }}>
       <div className='App'>
-        <SignupPage />
+        <Routes>
+          <Route path={"/signup"} element={<SignupPage />} />
+          <Route path={"/home"} element={<MainPage />} />
+        </Routes>
       </div>
     </userContext.Provider>
   );
