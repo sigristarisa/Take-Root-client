@@ -1,8 +1,12 @@
 import { useState, useContext } from "react";
-import { squareContext } from "../../helpers/createContext";
+import { userContext, squareContext } from "../../helpers/createContext";
+import client from "../../helpers/client";
 import FormInput from "../Signup/FormInput";
+
 const SquaresCalculator = () => {
+  const { user } = useContext(userContext);
   const { square, setSquare } = useContext(squareContext);
+  console.log("whats user: ", user);
   const [size, setSize] = useState({ length: 0, height: 0, unit: "" });
 
   const calculateSquares = (length, height, unit) => {
@@ -29,10 +33,14 @@ const SquaresCalculator = () => {
     calculateSquares(size.length, size.height, size.unit);
   };
 
-  console.log("what's the square: ", square);
+  const submitRaisedBed = () => {
+    client
+      .post("/raisedbed", { ...square, userId: user.id })
+      .then((res) => console.log("whats this: ", res.data));
+  };
 
   return (
-    <section>
+    <section className='calculator-container'>
       <h1>Let's get started!</h1>
       <p>
         Choose the size that is the closest to your raised bed. As we are
@@ -62,6 +70,7 @@ const SquaresCalculator = () => {
         </select>
         <input type='submit' value='Preview' />
       </form>
+      <button onClick={() => submitRaisedBed()}>Next Step</button>
     </section>
   );
 };

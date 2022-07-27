@@ -24,7 +24,7 @@ const SignupForm = () => {
 
   return (
     <main>
-      <form onSubmit={handleSubmit}>
+      <form className='signup-form' onSubmit={handleSubmit}>
         <FormInput
           label={"Choose your username"}
           name={"userName"}
