@@ -1,16 +1,25 @@
 import axios from "axios";
-
-const host = "http://localhost:4000";
+const host = process.env.REACT_APP_API_URL;
+const tokenKey = process.env.REACT_APP_USER_TOKEN;
 
 const client = {
   get: (path) => {
     const url = `${host}${path}`;
+    const headers = {
+      Authorization: `Bearer ${localStorage.getItem(tokenKey)}`,
+    };
 
-    return axios.get(url);
+    return axios.get(url, { headers });
   },
-  post: (path, data) => {
+
+  post: (path, data, withToken = true) => {
     const url = `${host}${path}`;
-    return axios.post(url, data);
+    const token = localStorage.getItem(tokenKey);
+    let headers = {};
+    if (withToken) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+    return axios.post(url, data, { headers });
   },
 };
 

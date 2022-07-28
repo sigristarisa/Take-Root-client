@@ -15,7 +15,7 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    client.post("/user/login", user).then((res) => {
+    client.post("/user/login", user, false).then((res) => {
       localStorage.setItem("token", res.data.token);
       setUser(res.data);
       navigate("../home", { replace: true });

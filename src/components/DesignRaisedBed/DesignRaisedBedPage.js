@@ -1,11 +1,11 @@
-import DesignRaisedBed from "./DesignRaisedBed";
 import PlantLibrary from "./PlantLibrary";
+import PreviewRaisedBed from "../CreateSquares/PreviewRaisedBed";
 import "./DesignRaisedBedPage.css";
 
 const DesignRaisedBedPage = () => {
   return (
     <main className='design-raisedbed-page-main'>
-      <DesignRaisedBed />
+      <PreviewRaisedBed />
       <PlantLibrary />;
     </main>
   );
