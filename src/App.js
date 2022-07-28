@@ -6,6 +6,7 @@ import SignupPage from "./components/Signup/SignupPage";
 import LoginPage from "./components/Login/LoginPage";
 import MainPage from "./components/MainPage/MainPage";
 import CreateSquaresPage from "./components/CreateSquares/CreateSquaresPage";
+import DesignRaisedBedPage from "./components/DesignRaisedBed/DesignRaisedBedPage";
 import "./App.css";
 
 function App() {
@@ -34,6 +35,10 @@ function App() {
             <Route
               path={"/create-raised-bed"}
               element={<CreateSquaresPage />}
+            />
+            <Route
+              path={"/design-raised-bed"}
+              element={<DesignRaisedBedPage />}
             />
           </Routes>
         </div>

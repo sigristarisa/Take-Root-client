@@ -3,6 +3,11 @@ import axios from "axios";
 const host = "http://localhost:4000";
 
 const client = {
+  get: (path) => {
+    const url = `${host}${path}`;
+
+    return axios.get(url);
+  },
   post: (path, data) => {
     const url = `${host}${path}`;
     return axios.post(url, data);
