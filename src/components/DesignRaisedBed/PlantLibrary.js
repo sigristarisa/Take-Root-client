@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PlantLibraryItem from "./PlantLibraryItem";
 import client from "../../helpers/client";
 
 const PlantLibrary = () => {
@@ -11,13 +12,7 @@ const PlantLibrary = () => {
   return (
     <ul className='plant-library-list'>
       {plants.map((plant, index) => (
-        <li key={index} className='plant-library-list-item'>
-          <img
-            src={`http://localhost:4000${plant.image}`}
-            alt={`${plant.name}`}
-          />
-          <p>{plant.name}</p>
-        </li>
+        <PlantLibraryItem plant={plant} index={index} />
       ))}
     </ul>
   );
