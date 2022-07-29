@@ -10,14 +10,13 @@ const CreateSquaresPage = () => {
     row: 0,
     column: 0,
   });
-
   const [squareFixed, setSquareFixed] = useState(false);
 
   return (
     <div>
       <MainHeader />
       <main className='create-squares-page-main'>
-        <PreviewRaisedBed square={square} />
+        <PreviewRaisedBed square={square} squareFixed={squareFixed} />
         {!squareFixed ? (
           <SquaresCalculator
             square={square}
