@@ -12,20 +12,21 @@ import DesignRaisedBedPage from "./components/DesignRaisedBed/DesignRaisedBedPag
 import "./App.css";
 
 function App() {
-  const [user, setUser] = useState({
+  const initialUserState = {
     userName: "",
     email: "",
     password: "",
     confirmPassword: "",
     userImage: "",
-  });
+  };
 
+  const [user, setUser] = useState(initialUserState);
   const [raisedBed, setRaisedBed] = useState({});
 
   const isLoggedIn = (user) => {
     const userDataArr = Object.keys(user);
-    const isEmpty = userDataArr.filter((userData) => userData === "");
-    return isEmpty ? false : true;
+    const notEmpty = userDataArr.find((userData) => userData !== "");
+    return notEmpty ? true : false;
   };
 
   useEffect(() => {
@@ -51,7 +52,10 @@ function App() {
                 path={"/login"}
                 element={<LoginPage isLoggedIn={isLoggedIn} />}
               />
-              <Route path={"/home"} element={<MainPage />} />
+              <Route
+                path={"/home"}
+                element={<MainPage initialUserState={initialUserState} />}
+              />
               <Route
                 path={"/create-raised-bed"}
                 element={<CreateSquaresPage />}
