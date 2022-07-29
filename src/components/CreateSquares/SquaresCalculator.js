@@ -1,14 +1,11 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import { userContext, raisedBedContext } from "../../helpers/createContext";
 import SizeDropDown from "./SizeDropDown";
 import client from "../../helpers/client";
 
-const SquaresCalculator = ({ square, setSquare }) => {
+const SquaresCalculator = ({ square, setSquare, setSquareFixed }) => {
   const { user } = useContext(userContext);
   const { setRaisedBed } = useContext(raisedBedContext);
-
-  const navigate = useNavigate();
 
   const handleSquares = (e) => {
     const { name, value } = e.target;
@@ -17,12 +14,10 @@ const SquaresCalculator = ({ square, setSquare }) => {
 
   const submitRaisedBed = (e) => {
     e.preventDefault();
-    client
-      .post("/raisedbed", { ...square, userId: user.id })
-      .then((res) => {
-        setRaisedBed(res.data);
-      })
-      .then(navigate("../design-raised-bed", { replace: true }));
+    client.post("/raisedbed", { ...square, userId: user.id }).then((res) => {
+      setRaisedBed(res.data);
+      setSquareFixed(true);
+    });
   };
 
   return (

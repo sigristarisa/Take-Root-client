@@ -8,17 +8,49 @@
   height: 100%;
   display: grid;
   place-items: center;
-  border: red solid 1px;
+  border: blue solid 1px;
 }
 
 .raised-bed-container {
   padding: 0;
   display: grid;
   list-style: none;
+  border: red solid 1px;
 }
 
 .square-container {
   width: 200px;
   height: 200px;
   border: black 1px dotted;
+}
+
+.plant-library-list {
+  width: 50vw;
+  height: 60vh;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: blue solid 1px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: 40px;
+  overflow: scroll;
+}
+
+.plant-library-list-item {
+  border: red solid 1px;
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+}
+
+.plant-library-list-item img {
+  width: 80%;
+  border: blue solid 1px;
+}
+
+.plant-library-list-item p {
+  margin: 0;
 }
