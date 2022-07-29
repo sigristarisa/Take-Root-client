@@ -1,9 +1,4 @@
-import { useContext } from "react";
-import { squareContext } from "../../helpers/createContext";
-
-const PreviewRaisedBed = () => {
-  const { square } = useContext(squareContext);
-
+const PreviewRaisedBed = ({ square }) => {
   const createSquares = () => {
     const rows = square.row;
     const columns = square.column;

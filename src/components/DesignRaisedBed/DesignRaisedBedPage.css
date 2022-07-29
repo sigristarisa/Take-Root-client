@@ -33,3 +33,23 @@
 .plant-library-list-item p {
   margin: 0;
 }
+
+.preview-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border: red solid 1px;
+}
+
+.raised-bed-container {
+  padding: 0;
+  display: grid;
+  list-style: none;
+}
+
+.square-container {
+  width: 200px;
+  height: 200px;
+  border: black 1px dotted;
+}

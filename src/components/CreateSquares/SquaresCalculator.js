@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
-import { userContext, squareContext } from "../../helpers/createContext";
+import { userContext, raisedBedContext } from "../../helpers/createContext";
 import SizeDropDown from "./SizeDropDown";
 import client from "../../helpers/client";
 
-const SquaresCalculator = () => {
+const SquaresCalculator = ({ square, setSquare }) => {
   const { user } = useContext(userContext);
-  const { square, setSquare } = useContext(squareContext);
+  const { setRaisedBed } = useContext(raisedBedContext);
+
   const navigate = useNavigate();
 
   const handleSquares = (e) => {
@@ -19,6 +19,9 @@ const SquaresCalculator = () => {
     e.preventDefault();
     client
       .post("/raisedbed", { ...square, userId: user.id })
+      .then((res) => {
+        setRaisedBed(res.data);
+      })
       .then(navigate("../design-raised-bed", { replace: true }));
   };
 

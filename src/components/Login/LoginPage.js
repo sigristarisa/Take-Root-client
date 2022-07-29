@@ -1,11 +1,16 @@
+import { useContext } from "react";
+import { userContext } from "../../helpers/createContext";
+
 import SignupHeader from "../Signup/SignupHeader";
 import LoginForm from "./LoginForm";
 
-const LoginPage = () => {
+const LoginPage = ({ isLoggedIn }) => {
+  const { user } = useContext(userContext);
+
   return (
     <div>
       <SignupHeader />
-      <LoginForm />
+      {isLoggedIn(user) && <LoginForm />}
     </div>
   );
 };

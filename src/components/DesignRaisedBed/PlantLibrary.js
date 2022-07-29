@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PlantLibraryItem from "./PlantLibraryItem";
 import client from "../../helpers/client";
 
 const PlantLibrary = () => {
   const [plants, setPlants] = useState([]);
 
-  client.get("/plant").then((res) => {
-    setPlants(res.data.plants);
+  useEffect(() => {
+    client.get("/plant").then((res) => {
+      setPlants(res.data.plants);
+    });
   });
 
   return (

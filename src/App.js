@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { userContext, squareContext } from "./helpers/createContext";
-import client from "./helpers/client";
+import { userContext, raisedBedContext } from "./helpers/createContext";
 import LandingPage from "./components/LandingPage/LandingPage";
 import SignupPage from "./components/Signup/SignupPage";
 import LoginPage from "./components/Login/LoginPage";
@@ -21,27 +20,37 @@ function App() {
     userImage: "",
   });
 
-  const [square, setSquare] = useState({
-    row: 0,
-    column: 0,
-  });
+  const [raisedBed, setRaisedBed] = useState({});
 
-  // useEffect(() => {
-  //   client.post("/user", user, true).then((res) => {
-  //     const loggedInUser = JSON.stringify(res.data);
-  //     setUser(JSON.parse(loggedInUser));
-  //   });
-  // }, []);
+  const isLoggedIn = (user) => {
+    const userDataArr = Object.keys(user);
+    const isEmpty = userDataArr.filter((userData) => userData === "");
+    return isEmpty ? false : true;
+  };
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setUser(foundUser);
+    }
+  }, []);
 
   return (
     <userContext.Provider value={{ user, setUser }}>
-      <squareContext.Provider value={{ square, setSquare }}>
+      <raisedBedContext.Provider value={{ raisedBed, setRaisedBed }}>
         <DndProvider backend={HTML5Backend}>
           <div className='App'>
             <Routes>
               <Route path={"/"} element={<LandingPage />} />
-              <Route path={"/signup"} element={<SignupPage />} />
-              <Route path={"/login"} element={<LoginPage />} />
+              <Route
+                path={"/signup"}
+                element={<SignupPage isLoggedIn={isLoggedIn} />}
+              />
+              <Route
+                path={"/login"}
+                element={<LoginPage isLoggedIn={isLoggedIn} />}
+              />
               <Route path={"/home"} element={<MainPage />} />
               <Route
                 path={"/create-raised-bed"}
@@ -54,7 +63,7 @@ function App() {
             </Routes>
           </div>
         </DndProvider>
-      </squareContext.Provider>
+      </raisedBedContext.Provider>
     </userContext.Provider>
   );
 }

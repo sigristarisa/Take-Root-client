@@ -15,7 +15,8 @@ const SignupForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    client.post("/user/signup", user).then((res) => {
+    client.post("/user/signup", user, false).then((res) => {
+      localStorage.setItem("user", JSON.stringify(res.data));
       localStorage.setItem("token", res.data.token);
       setUser(res.data);
       navigate("../home", { replace: true });
