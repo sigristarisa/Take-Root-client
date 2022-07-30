@@ -1,19 +1,22 @@
-import { useContext, useRef } from "react";
+import { useContext, useState } from "react";
 import { raisedBedContext } from "../../helpers/createContext";
+import client from "../../helpers/client";
 
 const DesignRaisedBed = () => {
   const { raisedBed } = useContext(raisedBedContext);
-  const square = useRef();
+  const [squareId, setSquareId] = useState(0);
 
-  const dragEnter = (e, squareId) => {
-    square.current = squareId;
-    e.dataTransfer.setData("squareId", squareId);
-    console.log("squareId", squareId);
+  const getSquareId = (squareId) => {
+    console.log("am I getting this?: ", squareId);
+    setSquareId(squareId);
   };
 
   const drop = (e) => {
     const plantId = e.dataTransfer.getData("plantId");
-    console.log("plantId", Number(plantId));
+    const idObj = { squareId: Number(squareId), plantId: Number(plantId) };
+    client
+      .patch("/square", idObj)
+      .then((res) => console.log("what's the response: ", res.data));
   };
 
   const raisedBedIsSet = () => {
@@ -39,7 +42,7 @@ const DesignRaisedBed = () => {
             <li
               key={index}
               className='square-container'
-              onDragEnter={(e) => dragEnter(e, index)}
+              onClick={() => getSquareId(square.id)}
               onDrop={(e) => drop(e)}
               onDragOver={(e) => e.preventDefault()}
             >

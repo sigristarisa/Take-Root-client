@@ -6,7 +6,6 @@ const PlantLibraryItem = ({ plant, index }) => {
   const dragStart = (e, plantId) => {
     dragPlant.current = plantId;
     e.dataTransfer.setData("plantId", plantId);
-    console.log("plantId", plantId);
   };
   return (
     <li key={index} className='plant-library-list-item'>
