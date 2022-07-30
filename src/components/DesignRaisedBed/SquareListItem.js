@@ -4,7 +4,6 @@ import client from "../../helpers/client";
 
 const SquareListItem = ({ square, index }) => {
   const { raisedBed, setRaisedBed } = useContext(raisedBedContext);
-
   const [squareId, setSquareId] = useState(0);
 
   const getSquareId = (squareId) => setSquareId(squareId);
@@ -21,7 +20,7 @@ const SquareListItem = ({ square, index }) => {
   return (
     <li
       key={index}
-      className='square-container plant-library-list-item'
+      className='square-container square-list-item'
       onClick={() => getSquareId(square.id)}
       onDrop={(e) => drop(e)}
       onDragOver={(e) => e.preventDefault()}

@@ -23,9 +23,20 @@
   height: 200px;
   display: grid;
   place-items: center;
+  cursor: grab;
 }
 
-.plant-library-list-item img {
+.square-list-item {
+  border: red solid 1px;
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.plant-library-list-item img,
+.square-list-item img {
   width: 80%;
   border: blue solid 1px;
 }
@@ -52,4 +63,8 @@
   width: 200px;
   height: 200px;
   border: black 1px dotted;
+}
+
+.selected {
+  border: black 2px solid;
 }
