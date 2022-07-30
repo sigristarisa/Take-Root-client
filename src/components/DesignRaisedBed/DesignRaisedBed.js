@@ -4,7 +4,6 @@ import SquareListItem from "./SquareListItem";
 
 const DesignRaisedBed = () => {
   const { raisedBed } = useContext(raisedBedContext);
-
   const raisedBedIsSet = () => {
     const raisedBedObj = Object.keys(raisedBed);
     return raisedBedObj.length ? true : false;

@@ -11,10 +11,11 @@ const SquareListItem = ({ square, index }) => {
   const drop = (e) => {
     const plantId = e.dataTransfer.getData("plantId");
     const idObj = { squareId: Number(squareId), plantId: Number(plantId) };
-    client.patch("/square", idObj);
-    client
-      .get(`/raisedbed/${raisedBed.raisedBed.id}`)
-      .then((res) => setRaisedBed(res.data));
+    client.patch("/square", idObj).then(() => {
+      client.get(`/raisedbed/${raisedBed.raisedBed.id}`).then((res) => {
+        setRaisedBed(res.data);
+      });
+    });
   };
 
   return (
