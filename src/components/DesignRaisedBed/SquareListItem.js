@@ -2,9 +2,8 @@ import { useContext, useState } from "react";
 import { raisedBedContext } from "../../helpers/createContext";
 import client from "../../helpers/client";
 
-const SquareListItem = ({ square, index }) => {
+const SquareListItem = ({ square, index, squareId, setSquareId }) => {
   const { raisedBed, setRaisedBed } = useContext(raisedBedContext);
-  const [squareId, setSquareId] = useState(0);
 
   const getSquareId = (squareId) => setSquareId(squareId);
 
@@ -26,6 +25,7 @@ const SquareListItem = ({ square, index }) => {
       onDrop={(e) => drop(e)}
       onDragOver={(e) => e.preventDefault()}
     >
+      <p>{square.id}</p>
       {square.plantId && (
         <img
           src={`http://localhost:4000${square.plant.imagePerSquare}`}

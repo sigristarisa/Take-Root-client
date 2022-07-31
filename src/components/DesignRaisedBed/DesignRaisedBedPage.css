@@ -68,3 +68,7 @@
 .selected {
   border: black 2px solid;
 }
+
+.companion {
+  border: black 5px solid;
+}
