@@ -4,7 +4,7 @@ import client from "../../helpers/client";
 
 const PlantLibrary = ({ squareId }) => {
   const [plants, setPlants] = useState([]);
-  const [companions, setCompanions] = useState([]);
+  const [companionData, setCompanionData] = useState({});
 
   useEffect(() => {
     client.get("/plant").then((res) => {
@@ -16,14 +16,18 @@ const PlantLibrary = ({ squareId }) => {
     if (squareId) {
       client
         .get(`/square/companion/${squareId}`)
-        .then((res) => setCompanions(res.data.companions));
+        .then((res) => setCompanionData(res.data));
     }
   }, [squareId]);
 
   return (
     <ul className='plant-library-list'>
       {plants.map((plant, index) => (
-        <PlantLibraryItem plant={plant} index={index} companions={companions} />
+        <PlantLibraryItem
+          plant={plant}
+          index={index}
+          companionData={companionData}
+        />
       ))}
     </ul>
   );

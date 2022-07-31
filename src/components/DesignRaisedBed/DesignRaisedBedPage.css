@@ -72,3 +72,7 @@
 .companion {
   border: black 5px solid;
 }
+
+.non-companion {
+  border: red 5px solid;
+}

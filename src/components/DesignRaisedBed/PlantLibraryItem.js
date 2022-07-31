@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const PlantLibraryItem = ({ plant, index, companions }) => {
+const PlantLibraryItem = ({ plant, index, companionData }) => {
   const dragPlant = useRef();
 
   const dragStart = (e, plantId) => {
@@ -10,9 +10,15 @@ const PlantLibraryItem = ({ plant, index, companions }) => {
 
   const isCompanion = (plantId) => {
     let className = "";
+    const { companions, nonCompanions } = companionData;
+
     for (const companion of companions) {
       if (plantId === companion.companionId) className = "companion";
     }
+    for (const nonCompanion of nonCompanions) {
+      if (plantId === nonCompanion.nonCompanionId) className = "non-companion";
+    }
+
     return className;
   };
 
