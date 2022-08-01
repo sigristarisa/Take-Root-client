@@ -4,8 +4,7 @@ import { userContext } from "../../helpers/createContext";
 import MainBanner from "./MainBanner";
 import HowItWorks from "./HowItWorks";
 import Methods from "./Methods";
-
-import "../Signup/Signup.css";
+import "./HomePage.css";
 
 const HomePage = ({ isLoggedIn }) => {
   const { user } = useContext(userContext);

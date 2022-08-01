@@ -1,5 +1,4 @@
 import { useState } from "react";
-import MainHeader from "../MainPage/MainHeader";
 import DesignRaisedBed from "./DesignRaisedBed";
 import PlantLibrary from "./PlantLibrary";
 import NameRaisedBed from "./NameRaisedBed";
@@ -26,7 +25,6 @@ const DesignRaisedBedPage = () => {
 
   return (
     <div>
-      <MainHeader />
       <main className='design-raisedbed-page-main'>
         <DesignRaisedBed
           squareId={squareId}

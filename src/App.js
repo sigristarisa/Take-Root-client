@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { userContext, raisedBedContext } from "./helpers/createContext";
-import Header from "./components/MainPage/Header";
-import HomePage from "./components/MainPage/HomePage";
+import Header from "./components/HomePage/Header";
+import HomePage from "./components/HomePage/HomePage";
 import SignupPage from "./components/Signup/SignupPage";
 import LoginPage from "./components/Signup/LoginPage";
 import CreateSquaresPage from "./components/CreateSquares/CreateSquaresPage";
