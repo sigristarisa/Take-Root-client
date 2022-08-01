@@ -41,7 +41,7 @@ function App() {
     <userContext.Provider value={{ user, setUser }}>
       <raisedBedContext.Provider value={{ raisedBed, setRaisedBed }}>
         <div className='App'>
-          <Header isLoggedIn={isLoggedIn} />
+          <Header isLoggedIn={isLoggedIn} initialUserState={initialUserState} />
           <Routes>
             <Route path={"/"} element={<HomePage isLoggedIn={isLoggedIn} />} />
             <Route path={"/signup"} element={<SignupPage />} />
