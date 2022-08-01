@@ -19,6 +19,11 @@ const DesignRaisedBedPage = () => {
     setNotClickable("saved");
   };
 
+  const editRaisedBed = () => {
+    setIsSaved(false);
+    setNotClickable("");
+  };
+
   return (
     <div>
       <MainHeader />
@@ -30,7 +35,7 @@ const DesignRaisedBedPage = () => {
           notClickable={notClickable}
         />
         {isSaved ? (
-          <NameRaisedBed />
+          <NameRaisedBed editRaisedBed={editRaisedBed} />
         ) : (
           <PlantLibrary
             squareId={squareId}

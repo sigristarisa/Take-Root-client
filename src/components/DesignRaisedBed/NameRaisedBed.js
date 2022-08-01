@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import client from "../../helpers/client";
 import { raisedBedContext } from "../../helpers/createContext";
 
-const NameRaisedBed = () => {
+const NameRaisedBed = ({ editRaisedBed }) => {
   const [raisedBedName, setRaisedBedName] = useState({});
   const { raisedBed } = useContext(raisedBedContext);
 
@@ -26,6 +26,7 @@ const NameRaisedBed = () => {
         value={raisedBedName.name}
         onChange={handleRaisedBedName}
       />
+      <button onClick={() => editRaisedBed()}>Keep editing</button>
       <input type='submit' />
     </form>
   );
