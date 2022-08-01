@@ -4,14 +4,14 @@ import SquareListItem from "./SquareListItem";
 
 const DesignRaisedBed = ({ squareId, setSquareId }) => {
   const { raisedBed } = useContext(raisedBedContext);
-  const raisedBedIsSet = () => {
-    const raisedBedObj = Object.keys(raisedBed);
+  const isSet = (obj) => {
+    const raisedBedObj = Object.keys(obj);
     return raisedBedObj.length ? true : false;
   };
 
-  const getColumns = () => {
+  const getColumns = (raisedBed) => {
     let columns = 1;
-    if (raisedBedIsSet()) {
+    if (isSet(raisedBed)) {
       columns = {
         gridTemplateColumns: `repeat(${raisedBed.raisedBed.columns}, 1fr)`,
       };
@@ -21,8 +21,8 @@ const DesignRaisedBed = ({ squareId, setSquareId }) => {
 
   return (
     <div className='preview-container'>
-      {raisedBedIsSet() && (
-        <ul className='raised-bed-container' style={getColumns()}>
+      {isSet(raisedBed) && (
+        <ul className='raised-bed-container' style={getColumns(raisedBed)}>
           {raisedBed.raisedBed.square.map((square, index) => (
             <SquareListItem
               square={square}

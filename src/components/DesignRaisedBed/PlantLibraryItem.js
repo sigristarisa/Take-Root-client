@@ -8,17 +8,23 @@ const PlantLibraryItem = ({ plant, index, companionData }) => {
     e.dataTransfer.setData("plantId", plantId);
   };
 
+  const isSet = (obj) => {
+    const raisedBedObj = Object.keys(obj);
+    return raisedBedObj.length ? true : false;
+  };
+
   const isCompanion = (plantId) => {
     let className = "";
-    const { companions, nonCompanions } = companionData;
-
-    for (const companion of companions) {
-      if (plantId === companion.companionId) className = "companion";
+    if (isSet(companionData)) {
+      const { companions, nonCompanions } = companionData;
+      for (const companion of companions) {
+        if (plantId === companion.companionId) className = "companion";
+      }
+      for (const nonCompanion of nonCompanions) {
+        if (plantId === nonCompanion.nonCompanionId)
+          className = "non-companion";
+      }
     }
-    for (const nonCompanion of nonCompanions) {
-      if (plantId === nonCompanion.nonCompanionId) className = "non-companion";
-    }
-
     return className;
   };
 

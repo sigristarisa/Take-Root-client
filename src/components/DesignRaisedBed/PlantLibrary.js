@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PlantLibraryItem from "./PlantLibraryItem";
+import ButtonBar from "./ButtonBar";
 import client from "../../helpers/client";
 
 const PlantLibrary = ({ squareId }) => {
@@ -21,15 +22,18 @@ const PlantLibrary = ({ squareId }) => {
   }, [squareId]);
 
   return (
-    <ul className='plant-library-list'>
-      {plants.map((plant, index) => (
-        <PlantLibraryItem
-          plant={plant}
-          index={index}
-          companionData={companionData}
-        />
-      ))}
-    </ul>
+    <aside>
+      <ul className='plant-library-list'>
+        {plants.map((plant, index) => (
+          <PlantLibraryItem
+            plant={plant}
+            index={index}
+            companionData={companionData}
+          />
+        ))}
+      </ul>
+      <ButtonBar />
+    </aside>
   );
 };
 
