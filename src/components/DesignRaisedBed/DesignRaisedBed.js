@@ -2,12 +2,8 @@ import { useContext } from "react";
 import { raisedBedContext } from "../../helpers/createContext";
 import SquareListItem from "./SquareListItem";
 
-const DesignRaisedBed = ({ squareId, setSquareId }) => {
+const DesignRaisedBed = ({ squareId, setSquareId, isSet }) => {
   const { raisedBed } = useContext(raisedBedContext);
-  const isSet = (obj) => {
-    const raisedBedObj = Object.keys(obj);
-    return raisedBedObj.length ? true : false;
-  };
 
   const getColumns = (raisedBed) => {
     let columns = 1;

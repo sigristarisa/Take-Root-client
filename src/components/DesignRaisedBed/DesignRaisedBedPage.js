@@ -6,13 +6,21 @@ import "./DesignRaisedBedPage.css";
 
 const DesignRaisedBedPage = () => {
   const [squareId, setSquareId] = useState(0);
+  const isSet = (obj) => {
+    const dataObj = Object.keys(obj);
+    return dataObj.length ? true : false;
+  };
 
   return (
     <div>
       <MainHeader />
       <main className='design-raisedbed-page-main'>
-        <DesignRaisedBed squareId={squareId} setSquareId={setSquareId} />
-        <PlantLibrary squareId={squareId} />
+        <DesignRaisedBed
+          squareId={squareId}
+          setSquareId={setSquareId}
+          isSet={isSet}
+        />
+        <PlantLibrary squareId={squareId} isSet={isSet} />
       </main>
     </div>
   );

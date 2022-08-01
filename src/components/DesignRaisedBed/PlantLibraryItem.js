@@ -1,16 +1,11 @@
 import { useRef } from "react";
 
-const PlantLibraryItem = ({ plant, index, companionData }) => {
+const PlantLibraryItem = ({ plant, index, companionData, isSet }) => {
   const dragPlant = useRef();
 
   const dragStart = (e, plantId) => {
     dragPlant.current = plantId;
     e.dataTransfer.setData("plantId", plantId);
-  };
-
-  const isSet = (obj) => {
-    const raisedBedObj = Object.keys(obj);
-    return raisedBedObj.length ? true : false;
   };
 
   const isCompanion = (plantId) => {
