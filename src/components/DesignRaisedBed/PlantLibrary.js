@@ -3,7 +3,7 @@ import PlantLibraryItem from "./PlantLibraryItem";
 import ButtonBar from "./ButtonBar";
 import client from "../../helpers/client";
 
-const PlantLibrary = ({ squareId, isSet }) => {
+const PlantLibrary = ({ squareId, isSet, saveRaisedBed }) => {
   const [plants, setPlants] = useState([]);
   const [companionData, setCompanionData] = useState({});
 
@@ -33,7 +33,7 @@ const PlantLibrary = ({ squareId, isSet }) => {
           />
         ))}
       </ul>
-      <ButtonBar />
+      <ButtonBar saveRaisedBed={saveRaisedBed} />
     </aside>
   );
 };

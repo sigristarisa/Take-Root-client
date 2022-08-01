@@ -76,3 +76,7 @@
 .non-companion {
   border: red 5px solid;
 }
+
+.saved {
+  pointer-events: none;
+}

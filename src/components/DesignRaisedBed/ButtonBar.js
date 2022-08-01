@@ -2,7 +2,7 @@ import { useContext } from "react";
 import client from "../../helpers/client";
 import { raisedBedContext } from "../../helpers/createContext";
 
-const ButtonBar = () => {
+const ButtonBar = ({ saveRaisedBed }) => {
   const { raisedBed, setRaisedBed } = useContext(raisedBedContext);
 
   const deleteSquares = () => {
@@ -14,7 +14,7 @@ const ButtonBar = () => {
   return (
     <div>
       <button onClick={() => deleteSquares()}>Delete All</button>
-      <button>Save</button>
+      <button onClick={() => saveRaisedBed()}>Save</button>
     </div>
   );
 };
