@@ -1,13 +1,43 @@
-header {
-  width: 100vw;
-  height: 10vh;
-  background-color: black;
+.login-signup-header {
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 14fr 1fr;
+  place-items: center;
 }
-main {
+
+.logo {
+  margin: 0;
+  font-size: var(--font-l);
+}
+
+.login-signup-btn-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+}
+
+.login-signup-btn-container button {
+  border: none;
+}
+
+.login-btn {
+  color: var(--green);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.signup-btn {
+  width: 100px;
+  height: 32px;
+  color: var(--sand-20);
+  background-color: var(--green);
+  border-radius: 12px;
+}
+
+.login- main {
   width: 100vw;
   height: 90vh;
   display: grid;
-  place-items: center;
 }
 
 .signup-form {

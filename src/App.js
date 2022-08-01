@@ -4,7 +4,7 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { userContext, raisedBedContext } from "./helpers/createContext";
 import LandingPage from "./components/LandingPage/LandingPage";
-import SignupPage from "./components/Signup/SignupPage";
+import SignupPage from "./components/Signup/SignUpPage";
 import LoginPage from "./components/Login/LoginPage";
 import MainPage from "./components/MainPage/MainPage";
 import CreateSquaresPage from "./components/CreateSquares/CreateSquaresPage";

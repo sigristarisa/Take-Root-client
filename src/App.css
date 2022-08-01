@@ -1,9 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap"); /* font-family: 'Corben', cursive;*/
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  /* color */
+  --green: #124308;
+  --sand-100: #e0d2b4;
+  --sand-60: #ece4d2;
+  --sand-20: #f9f6f0;
+  --sand-10: #fcfaf7;
+  --grape-100: #630053;
+  --grape-hover: #45003a;
+  --grape-click: #280021;
+
+  /* font size*/
+  --font-xs: 12px;
+  --font-s: 16px;
+  --font-m: 20px;
+  --font-l: 32px;
+  --font-xl: 40px;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  font-family: "Corben", cursive;
+}
+
+header {
+  width: 100vw;
+  height: 10vh;
+  background-color: var(--sand-20);
+}
+
+button {
+  cursor: pointer;
 }
