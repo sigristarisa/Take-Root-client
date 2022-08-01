@@ -8,10 +8,8 @@ const PlantLibrary = ({ squareId, isSet, saveRaisedBed }) => {
   const [companionData, setCompanionData] = useState({});
 
   useEffect(() => {
-    client.get("/plant").then((res) => {
-      setPlants(res.data.plants);
-    });
-  });
+    client.get("/plant").then((res) => setPlants(res.data.plants));
+  }, []);
 
   useEffect(() => {
     if (squareId) {
