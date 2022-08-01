@@ -20,7 +20,7 @@ html {
   --font-s: 16px;
   --font-m: 20px;
   --font-l: 32px;
-  --font-xl: 40px;
+  --font-xl: 96px;
 }
 
 body {
@@ -34,6 +34,16 @@ header {
   width: 100vw;
   height: 10vh;
   background-color: var(--sand-20);
+}
+
+main {
+  width: 100vw;
+  height: 90vh;
+  background-color: var(--sand-20);
+  overflow: scroll;
+  display: grid;
+  place-items: center;
+  gap: 56px;
 }
 
 button {
