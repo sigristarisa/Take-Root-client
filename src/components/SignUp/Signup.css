@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 14fr 1fr;
   place-items: center;
+  color: var(--green);
 }
 
 .logo {
@@ -43,9 +44,12 @@
 }
 
 .main-container {
+  height: 80vh;
+  margin: 40px;
+  padding: 40px;
   display: grid;
-  padding: 20px;
   grid-template-columns: repeat(2, 1fr);
+  color: var(--green);
   background-color: var(--sand-60);
   border-radius: 40px;
 }
@@ -55,27 +59,13 @@
   line-height: 1.2em;
 }
 
-.signup-form {
-  width: 320px;
-  height: 480px;
-  padding: 40px;
-  display: grid;
-  gap: 20px;
-  border: black 1px solid;
-  border-radius: 48px;
-}
-
-.main-container {
-  width: 80vw;
-  height: 80vh;
-}
-
 .how-it-works-container {
   padding: 40px;
   width: 100vw;
   height: 50vh;
   display: grid;
   place-items: center;
+  color: var(--green);
 }
 
 .how-it-works-container h3 {
@@ -122,6 +112,7 @@
 }
 
 .method-container {
+  height: 440px;
   padding: 40px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -136,4 +127,36 @@
 
 .method-container p {
   font-size: var(--font-m);
+}
+
+.signup-form {
+  width: 20vw;
+  height: 70vh;
+  padding: 40px;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  background-color: var(--sand-60);
+  border-radius: 48px;
+}
+
+.form-input {
+  width: 100%;
+  height: 44px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+}
+
+.form-input::placeholder {
+  color: var(--sand-60);
+  font-size: var(--font-s);
+}
+
+.signup-btn-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
+  gap: 20px;
 }

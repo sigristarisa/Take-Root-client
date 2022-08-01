@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userContext } from "../../helpers/createContext";
 import client from "../../helpers/client";
-import FormInput from "../Signup/FormInput";
+import FormInput from "./FormInput";
 
 const LoginForm = () => {
   const { user, setUser } = useContext(userContext);
@@ -19,7 +19,7 @@ const LoginForm = () => {
       localStorage.setItem("user", JSON.stringify(res.data));
       localStorage.setItem("token", res.data.token);
       setUser(res.data);
-      navigate("../home", { replace: true });
+      navigate("../", { replace: true });
     });
   };
 

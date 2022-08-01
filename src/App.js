@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
 import { userContext, raisedBedContext } from "./helpers/createContext";
-import LandingPage from "./components/LandingPage/LandingPage";
-import SignupPage from "./components/Signup/SignUpPage";
-import LoginPage from "./components/Login/LoginPage";
-import MainPage from "./components/MainPage/MainPage";
+import Header from "./components/MainPage/Header";
+import HomePage from "./components/MainPage/HomePage";
+import SignupPage from "./components/Signup/SignupPage";
+import LoginPage from "./components/Signup/LoginPage";
 import CreateSquaresPage from "./components/CreateSquares/CreateSquaresPage";
 import DesignRaisedBedPage from "./components/DesignRaisedBed/DesignRaisedBedPage";
 import "./App.css";
@@ -24,7 +22,7 @@ function App() {
   const [raisedBed, setRaisedBed] = useState({});
 
   const isLoggedIn = (user) => {
-    const userDataArr = Object.keys(user);
+    const userDataArr = Object.values(user);
     const notEmpty = userDataArr.find((userData) => userData !== "");
     return notEmpty ? true : false;
   };
@@ -42,33 +40,22 @@ function App() {
   return (
     <userContext.Provider value={{ user, setUser }}>
       <raisedBedContext.Provider value={{ raisedBed, setRaisedBed }}>
-        <DndProvider backend={HTML5Backend}>
-          <div className='App'>
-            <Routes>
-              <Route path={"/"} element={<LandingPage />} />
-              <Route
-                path={"/signup"}
-                element={<SignupPage isLoggedIn={isLoggedIn} />}
-              />
-              <Route
-                path={"/login"}
-                element={<LoginPage isLoggedIn={isLoggedIn} />}
-              />
-              <Route
-                path={"/home"}
-                element={<MainPage initialUserState={initialUserState} />}
-              />
-              <Route
-                path={"/create-raised-bed"}
-                element={<CreateSquaresPage />}
-              />
-              <Route
-                path={"/design-raised-bed"}
-                element={<DesignRaisedBedPage />}
-              />
-            </Routes>
-          </div>
-        </DndProvider>
+        <div className='App'>
+          <Header isLoggedIn={isLoggedIn} />
+          <Routes>
+            <Route path={"/"} element={<HomePage isLoggedIn={isLoggedIn} />} />
+            <Route path={"/signup"} element={<SignupPage />} />
+            <Route path={"/login"} element={<LoginPage />} />
+            <Route
+              path={"/create-raised-bed"}
+              element={<CreateSquaresPage />}
+            />
+            <Route
+              path={"/design-raised-bed"}
+              element={<DesignRaisedBedPage />}
+            />
+          </Routes>
+        </div>
       </raisedBedContext.Provider>
     </userContext.Provider>
   );

@@ -3,6 +3,7 @@ const FormInput = ({ label, name, type, value, placeholder, handleChange }) => {
     <div>
       <label htmlFor={name}>{label}</label>
       <input
+        className='form-input'
         id={name}
         name={name}
         type={type}
