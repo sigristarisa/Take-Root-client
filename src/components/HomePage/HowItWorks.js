@@ -10,28 +10,28 @@ const HowItWorks = () => {
       <div className='steps-container'>
         <div className='step-container'>
           <img src={step1} alt='step-1' />
-          <div>
+          <div className='step-text'>
             <h4>Step 1</h4>
             <p>Create your personal raised bed squares </p>
           </div>
         </div>
         <div className='step-container'>
           <img src={step2} alt='step-2' />
-          <div>
+          <div className='step-text'>
             <h4>Step 2</h4>
             <p>Choose your herbs, fruits and vegetables</p>
           </div>
         </div>
         <div className='step-container'>
           <img src={step3} alt='step-3' />
-          <div>
+          <div className='step-text'>
             <h4>Step 3</h4>
             <p>Get companions and enemies of your chosen plant</p>
           </div>
         </div>
         <div className='step-container'>
           <img src={step4} alt='step-4' />
-          <div>
+          <div className='step-text'>
             <h4>Step 4</h4>
             <p>Print, save and have fun gardening!</p>
           </div>

@@ -46,7 +46,8 @@
 }
 
 .step-container {
-  height: 240px;
+  width: 20vw;
+  height: 30vh;
   padding: 2rem;
   background-color: var(--sand-60);
   border-radius: 40px;
@@ -56,10 +57,19 @@
 }
 
 .step-container img {
-  width: 160px;
-  height: 160px;
+  height: 80%;
   position: absolute;
-  top: -80px;
+  top: -96px;
+}
+
+.step-text h4 {
+  margin-top: 96px;
+  margin-bottom: 0px;
+}
+
+.step-text p {
+  margin-top: 0px;
+  font-size: var(--font-m);
 }
 
 .methods-container {
