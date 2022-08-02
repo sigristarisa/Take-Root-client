@@ -45,11 +45,7 @@ header {
 main {
   width: 100vw;
   height: 85vh;
-  background-color: var(--sand-20);
   overflow: scroll;
-  display: grid;
-  place-items: center;
-  gap: 56px;
 }
 
 button {

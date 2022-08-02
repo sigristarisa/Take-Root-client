@@ -20,7 +20,7 @@ const PreviewRaisedBed = ({ square }) => {
       <ul className='raised-bed-container' style={gridTemplateColumns}>
         {createSquares().map((square, index) => (
           <li key={index} className='square-container'>
-            square
+            <div className='soil-container'></div>
           </li>
         ))}
       </ul>

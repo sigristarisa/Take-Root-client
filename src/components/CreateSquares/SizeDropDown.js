@@ -1,8 +1,14 @@
 const SizeDropDown = ({ label, name, onChange }) => {
   return (
-    <div>
+    <div className='drop-down'>
       <label htmlFor={name}>{label}</label>
-      <select id={name} name={name} onChange={onChange}>
+      <select
+        id={name}
+        name={name}
+        onChange={onChange}
+        required
+        className='select-box'
+      >
         <option>...</option>
         <option value='1'>~ 30cm / 1foot</option>
         <option value='2'>~ 60cm / 2feet</option>

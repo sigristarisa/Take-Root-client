@@ -1,3 +1,9 @@
+.signup-login-main {
+  background-color: var(--sand-20);
+  display: grid;
+  place-items: center;
+}
+
 .signup-form {
   width: 20vw;
   height: 70vh;

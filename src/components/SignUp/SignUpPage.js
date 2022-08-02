@@ -25,7 +25,7 @@ const SignupForm = () => {
   };
 
   return (
-    <main>
+    <main className='signup-login-main'>
       <form className='signup-form' onSubmit={handleSubmit}>
         <h1>Register</h1>
         <FormInput

@@ -7,7 +7,7 @@ import "./HomePage.css";
 const HomePage = ({ isLoggedIn, setHeaderColor }) => {
   return (
     <div>
-      <main>
+      <main className='home-page-main'>
         <MainBanner isLoggedIn={isLoggedIn} />
         {isLoggedIn() && (
           <CreateRaisedBedButton setHeaderColor={setHeaderColor} />

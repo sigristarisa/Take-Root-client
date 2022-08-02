@@ -39,7 +39,7 @@ function App() {
 
   return (
     <userContext.Provider value={{ user, setUser }}>
-      <raisedBedContext.Provider value={{ raisedBed }}>
+      <raisedBedContext.Provider value={{ raisedBed, setRaisedBed }}>
         <div className='App'>
           <Header
             isLoggedIn={isLoggedIn}
@@ -62,7 +62,7 @@ function App() {
             <Route path={"/login"} element={<LoginPage />} />
             <Route
               path={"/create-raised-bed"}
-              element={<CreateSquaresPage />}
+              element={<CreateSquaresPage setHeaderColor={setHeaderColor} />}
             />
             <Route
               path={"/design-raised-bed"}
