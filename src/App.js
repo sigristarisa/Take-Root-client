@@ -16,7 +16,6 @@ function App() {
     email: "",
     password: "",
     confirmPassword: "",
-    userImage: "",
   };
 
   const [user, setUser] = useState(initialUserState);

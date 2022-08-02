@@ -28,14 +28,11 @@
   justify-items: end;
 }
 
-.login-signup-btn-container button {
-  border: none;
-}
-
 .login-btn {
   color: var(--green);
   background-color: transparent;
   text-decoration: underline;
+  border: none;
 }
 
 .login-btn:hover {
@@ -48,8 +45,23 @@
   color: var(--sand-20);
   background-color: var(--green);
   border-radius: 12px;
+  border: none;
 }
 
 .signup-btn:hover {
   background-color: var(--grape-hover);
+}
+
+.user-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: solid 4px var(--green);
+  display: grid;
+  place-items: center;
+}
+.user-btn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
