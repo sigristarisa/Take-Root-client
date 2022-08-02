@@ -1,20 +1,26 @@
 .login-signup-header {
   padding: 0 40px;
   display: grid;
-  grid-template-columns: 1fr 14fr 1fr;
+  grid-template-columns: auto 1fr auto;
   place-items: center;
   color: var(--green);
 }
 
 .logo {
-  margin: 0;
+  height: 70%;
+  text-align: center;
   font-size: var(--font-l);
 }
 
+.space {
+  width: 30vw;
+}
+
 .login-signup-btn-container {
+  width: 30vw;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 12px;
+  grid-template-columns: 3fr 1fr;
+  justify-items: end;
 }
 
 .login-signup-btn-container button {
@@ -32,7 +38,7 @@
 }
 
 .signup-btn {
-  width: 100px;
+  width: 120px;
   height: 32px;
   color: var(--sand-20);
   background-color: var(--green);
