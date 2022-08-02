@@ -23,18 +23,27 @@ const PlantLibraryItem = ({ plant, index, companionData, isSet }) => {
     return className;
   };
 
+  const renderCompanionText = (plantId) => {
+    if (isCompanion(plantId) === "companion") return "Companion";
+    if (isCompanion(plantId) === "non-companion") return "Avoid";
+    return "";
+  };
+
   return (
-    <li
-      key={index}
-      className={`plant-library-list-item ${isCompanion(plant.id)}`}
-    >
+    <li key={index} className='plant-library-list-item'>
       <img
+        className={`${isCompanion(plant.id)}`}
         src={`http://localhost:4000${plant.image}`}
         alt={`${plant.name}`}
         onDragStart={(e) => dragStart(e, plant.id)}
         draggable
       />
-      <p>{plant.name}</p>
+      <div className='plant-text-container'>
+        <p>{plant.name}</p>
+        <p className={`plant-${isCompanion(plant.id)}text`}>
+          {renderCompanionText(plant.id)}
+        </p>
+      </div>
     </li>
   );
 };

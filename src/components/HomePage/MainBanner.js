@@ -31,7 +31,9 @@ const MainBanner = ({ isLoggedIn }) => {
               Let's get started
             </button>
           )}
-          <button className='what-methods-btn'>What methods?</button>
+          <a className='what-methods-btn' href='#methods-container'>
+            What methods?
+          </a>
         </div>
       </div>
     </section>

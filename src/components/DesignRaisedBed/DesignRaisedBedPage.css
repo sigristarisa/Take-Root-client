@@ -31,19 +31,15 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  gap: 40px;
+  gap: 56px;
   overflow: scroll;
 }
 
 .plant-library-list-item {
-  background-color: white;
-  border: none;
-  border-radius: 12px;
   width: 200px;
   height: 200px;
   display: grid;
   place-items: center;
-  cursor: grab;
 }
 
 .square-list-item {
@@ -56,7 +52,10 @@
 
 .plant-library-list-item img,
 .square-list-item img {
-  width: 80%;
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  cursor: grab;
 }
 
 .plant-library-list-item p {
@@ -79,13 +78,8 @@
   height: 200px;
   border: black 1px dotted;
 }
-
-.selected {
-  border: black 2px solid;
-}
-
 .companion {
-  border: black 5px solid;
+  border: 2px solid var(--green);
 }
 
 .non-companion {
@@ -130,4 +124,31 @@
   align-items: center;
   justify-items: end;
   gap: 40px;
+}
+
+.plant-text-container {
+  padding: 8px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.plant-companiontext {
+  margin: 0px;
+  padding: 0 8px;
+  font-size: var(--font-xs);
+  color: white;
+  background-color: var(--green);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.plant-non-companiontext {
+  margin: 0px;
+  font-size: var(--font-xs);
+  color: white;
+  background-color: var(--carrot);
+  border: none;
+  border-radius: 8px;
+  text-align: center;
 }

@@ -14,6 +14,7 @@ html {
   --grape-100: #630053;
   --grape-hover: #45003a;
   --grape-click: #280021;
+  --carrot: #db471e;
 
   /* font size*/
   --font-xs: 12px;
@@ -22,6 +23,8 @@ html {
   --font-l: 32px;
   --font-xl: 56px;
   --font-xxl: 96px;
+
+  scroll-behavior: smooth;
 }
 
 body {

@@ -80,7 +80,7 @@
   font-size: var(--font-m);
 }
 
-.methods-container {
+#methods-container {
   height: 85vh;
   padding: 40px;
   display: grid;
@@ -89,7 +89,7 @@
   gap: 40px;
 }
 
-.methods-container h3 {
+#methods-container h3 {
   font-size: var(--font-l);
   color: var(--green);
   text-align: center;

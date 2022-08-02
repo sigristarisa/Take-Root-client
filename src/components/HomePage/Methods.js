@@ -3,7 +3,7 @@ import method2 from "../../assets/method-2.png";
 
 const Methods = () => {
   return (
-    <section className='methods-container'>
+    <section id='methods-container'>
       <div>
         <h3>Method 1</h3>
         <div className='method-container'>
