@@ -1,7 +1,6 @@
 import { useState } from "react";
 import DesignRaisedBed from "./DesignRaisedBed";
-import PlantLibrary from "./PlantLibrary";
-import NameRaisedBed from "./NameRaisedBed";
+import PreviewPlantLibrary from "./PreviewPlantLibrary";
 import "./DesignRaisedBedPage.css";
 
 const DesignRaisedBedPage = () => {
@@ -24,25 +23,22 @@ const DesignRaisedBedPage = () => {
   };
 
   return (
-    <div>
-      <main className='design-raisedbed-page-main'>
-        <DesignRaisedBed
-          squareId={squareId}
-          setSquareId={setSquareId}
-          isSet={isSet}
-          notClickable={notClickable}
-        />
-        {isSaved ? (
-          <NameRaisedBed editRaisedBed={editRaisedBed} />
-        ) : (
-          <PlantLibrary
-            squareId={squareId}
-            isSet={isSet}
-            saveRaisedBed={saveRaisedBed}
-          />
-        )}
-      </main>
-    </div>
+    <main className='design-raisedbed-page-main'>
+      <DesignRaisedBed
+        squareId={squareId}
+        setSquareId={setSquareId}
+        isSet={isSet}
+        notClickable={notClickable}
+      />
+      <PreviewPlantLibrary
+        isSaved={isSaved}
+        editRaisedBed={editRaisedBed}
+        squareId={squareId}
+        setSquareId={setSquareId}
+        isSet={isSet}
+        saveRaisedBed={saveRaisedBed}
+      />
+    </main>
   );
 };
 

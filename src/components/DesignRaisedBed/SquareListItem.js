@@ -31,11 +31,13 @@ const SquareListItem = ({ square, index, squareId, setSquareId }) => {
       onDrop={(e) => drop(e)}
       onDragOver={(e) => e.preventDefault()}
     >
-      {square.plantId && (
+      {square.plantId ? (
         <img
           src={`http://localhost:4000${square.plant.imagePerSquare}`}
           alt={`${square.plant.name} per square`}
         />
+      ) : (
+        <div className='soil-container'></div>
       )}
     </li>
   );

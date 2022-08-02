@@ -10,16 +10,14 @@ const CreateSquaresPage = ({ setHeaderColor }) => {
   });
 
   return (
-    <div>
-      <main className='create-squares-page-main'>
-        <PreviewRaisedBed square={square} />
-        <SquaresCalculator
-          square={square}
-          setSquare={setSquare}
-          setHeaderColor={setHeaderColor}
-        />
-      </main>
-    </div>
+    <main className='create-squares-page-main'>
+      <PreviewRaisedBed square={square} />
+      <SquaresCalculator
+        square={square}
+        setSquare={setSquare}
+        setHeaderColor={setHeaderColor}
+      />
+    </main>
   );
 };
 export default CreateSquaresPage;

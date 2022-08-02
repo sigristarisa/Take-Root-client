@@ -32,6 +32,7 @@
 }
 
 .calculator-container {
+  height: 85vh;
   color: var(--green);
   background-color: var(--sand-60);
   display: grid;
@@ -98,35 +99,4 @@
 
 .next-step-btn:hover {
   background-color: var(--grape-hover);
-}
-
-.plant-library-list {
-  width: 50vw;
-  height: 60vh;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border: blue solid 1px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  place-items: center;
-  gap: 40px;
-  overflow: scroll;
-}
-
-.plant-library-list-item {
-  border: red solid 1px;
-  width: 200px;
-  height: 200px;
-  display: grid;
-  place-items: center;
-}
-
-.plant-library-list-item img {
-  width: 80%;
-  border: blue solid 1px;
-}
-
-.plant-library-list-item p {
-  margin: 0;
 }

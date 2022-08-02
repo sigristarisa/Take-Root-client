@@ -38,6 +38,7 @@ header {
 }
 
 .header-green {
+  height: 10vh;
   color: var(--sand-20);
   background-color: var(--green);
 }

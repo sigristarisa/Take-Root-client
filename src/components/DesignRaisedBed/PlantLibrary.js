@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import PlantLibraryItem from "./PlantLibraryItem";
-import ButtonBar from "./ButtonBar";
 import client from "../../helpers/client";
 
-const PlantLibrary = ({ squareId, isSet, saveRaisedBed }) => {
+const PlantLibrary = ({ squareId, isSet }) => {
   const [plants, setPlants] = useState([]);
   const [companionData, setCompanionData] = useState({});
 
@@ -31,7 +30,6 @@ const PlantLibrary = ({ squareId, isSet, saveRaisedBed }) => {
           />
         ))}
       </ul>
-      <ButtonBar saveRaisedBed={saveRaisedBed} />
     </aside>
   );
 };
