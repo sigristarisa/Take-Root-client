@@ -25,7 +25,7 @@
 .how-it-works-container {
   padding: 40px;
   width: 100vw;
-  height: 50vh;
+  height: 60vh;
   display: grid;
   place-items: center;
   color: var(--green);
@@ -73,6 +73,7 @@
 }
 
 .methods-container {
+  height: 85vh;
   padding: 40px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

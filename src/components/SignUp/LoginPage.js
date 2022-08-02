@@ -26,7 +26,8 @@ const LoginForm = () => {
 
   return (
     <main>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='login-form'>
+        <h1>Login</h1>
         <FormInput
           label={"Email address"}
           name={"email"}
@@ -36,17 +37,22 @@ const LoginForm = () => {
           handleChange={handleUserData}
         />
         <FormInput
-          label={"Choose your password"}
+          label={"Password"}
           name={"password"}
           type={"password"}
           value={user.password}
-          placeholder={"Something safe!"}
+          placeholder={"enter your password here"}
           handleChange={handleUserData}
         />
-        <button onClick={() => navigate("../", { replace: true })}>
-          No, login later
-        </button>
-        <input className='signup-submit-btn' type='submit' value='Login' />
+        <div className='signup-btn-container'>
+          <button
+            className='signup-later-btn'
+            onClick={() => navigate("../signup", { replace: true })}
+          >
+            Or signup
+          </button>
+          <input className='signup-submit-btn' type='submit' value='Login' />
+        </div>
       </form>
     </main>
   );

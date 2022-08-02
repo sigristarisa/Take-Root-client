@@ -6,10 +6,15 @@
   color: var(--green);
 }
 
-.logo {
+.logo-title {
   height: 70%;
+  margin: 0px;
   text-align: center;
-  font-size: var(--font-l);
+  font-family: "Corben";
+  font-size: var(--font-xs);
+  color: var(--green);
+  background-color: transparent;
+  border: none;
 }
 
 .space {

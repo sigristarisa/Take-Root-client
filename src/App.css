@@ -54,6 +54,7 @@ button {
 footer {
   width: 100vw;
   height: 5vh;
+  font-size: var(--font-xs);
   background-color: var(--sand-20);
   display: grid;
   place-items: center;
