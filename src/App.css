@@ -20,7 +20,8 @@ html {
   --font-s: 16px;
   --font-m: 24px;
   --font-l: 32px;
-  --font-xl: 96px;
+  --font-xl: 56px;
+  --font-xxl: 96px;
 }
 
 body {

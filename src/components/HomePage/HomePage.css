@@ -10,7 +10,7 @@
 }
 
 .main-container h1 {
-  font-size: var(--font-xl);
+  font-size: var(--font-xxl);
   line-height: 1.2em;
   margin-bottom: 0px;
 }
@@ -82,20 +82,24 @@
 
 .methods-container h3 {
   font-size: var(--font-l);
+  color: var(--green);
+  text-align: center;
 }
 
 .method-container {
-  height: 440px;
+  height: 60vh;
   padding: 40px;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  align-items: center;
   color: var(--sand-60);
   background-color: var(--green);
   border-radius: 40px;
 }
 
 .method-container h4 {
-  font-size: var(--font-l);
+  font-size: var(--font-xl);
+  margin: 0px;
 }
 
 .method-container p {
