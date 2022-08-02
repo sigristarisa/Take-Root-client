@@ -1,9 +1,11 @@
 .design-raisedbed-page-main {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+  position: relative;
 }
 
-.preview-plant-library-container {
+.preview-plant-library-container,
+.name-raisedbed-container {
   height: 85vh;
   padding: 40px;
   color: var(--green);
@@ -151,4 +153,56 @@
   border: none;
   border-radius: 8px;
   text-align: center;
+}
+
+.name-raisedbed-container {
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.name-raisedbed-container h1 {
+  font-size: var(--font-xl);
+  text-align: center;
+}
+
+.name-input {
+  width: 560px;
+  height: 56px;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 12px;
+}
+
+.keep-edit-btn {
+  color: var(--grape-100);
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}
+
+.save-btn {
+  color: var(--sand-20);
+  background-color: var(--green);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: var(--grape-hover);
+}
+
+.saved-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--grape-100);
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.saved-container h1 {
+  color: var(--sand-20);
+  opacity: 1;
 }

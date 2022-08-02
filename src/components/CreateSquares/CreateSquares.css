@@ -7,6 +7,7 @@
 .preview-container {
   display: grid;
   place-items: center;
+  overflow: scroll;
 }
 
 .raised-bed-container {

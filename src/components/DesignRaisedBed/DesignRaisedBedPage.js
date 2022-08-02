@@ -1,11 +1,14 @@
 import { useState } from "react";
 import DesignRaisedBed from "./DesignRaisedBed";
 import PreviewPlantLibrary from "./PreviewPlantLibrary";
+import NameRaisedBed from "./NameRaisedBed";
+
 import "./DesignRaisedBedPage.css";
 
 const DesignRaisedBedPage = () => {
   const [squareId, setSquareId] = useState(0);
   const [isSaved, setIsSaved] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [notClickable, setNotClickable] = useState("");
   const isSet = (obj) => {
     const dataObj = Object.keys(obj);
@@ -15,6 +18,7 @@ const DesignRaisedBedPage = () => {
   const saveRaisedBed = () => {
     setIsSaved(true);
     setNotClickable("saved");
+    setSquareId(0);
   };
 
   const editRaisedBed = () => {
@@ -24,20 +28,32 @@ const DesignRaisedBedPage = () => {
 
   return (
     <main className='design-raisedbed-page-main'>
+      {isSubmitted && (
+        <div className='saved-container'>
+          <h1>Saved!</h1>
+        </div>
+      )}
       <DesignRaisedBed
         squareId={squareId}
         setSquareId={setSquareId}
         isSet={isSet}
         notClickable={notClickable}
       />
-      <PreviewPlantLibrary
-        isSaved={isSaved}
-        editRaisedBed={editRaisedBed}
-        squareId={squareId}
-        setSquareId={setSquareId}
-        isSet={isSet}
-        saveRaisedBed={saveRaisedBed}
-      />
+      {isSaved ? (
+        <NameRaisedBed
+          editRaisedBed={editRaisedBed}
+          setIsSubmitted={setIsSubmitted}
+        />
+      ) : (
+        <PreviewPlantLibrary
+          isSaved={isSaved}
+          editRaisedBed={editRaisedBed}
+          squareId={squareId}
+          setSquareId={setSquareId}
+          isSet={isSet}
+          saveRaisedBed={saveRaisedBed}
+        />
+      )}
     </main>
   );
 };
