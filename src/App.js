@@ -7,6 +7,7 @@ import SignupPage from "./components/Signup/SignupPage";
 import LoginPage from "./components/Signup/LoginPage";
 import CreateSquaresPage from "./components/CreateSquares/CreateSquaresPage";
 import DesignRaisedBedPage from "./components/DesignRaisedBed/DesignRaisedBedPage";
+import Footer from "./components/HomePage/Footer";
 import "./App.css";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       <raisedBedContext.Provider value={{ raisedBed, setRaisedBed }}>
         <div className='App'>
           <Header isLoggedIn={isLoggedIn} initialUserState={initialUserState} />
+
           <Routes>
             <Route path={"/"} element={<HomePage isLoggedIn={isLoggedIn} />} />
             <Route path={"/signup"} element={<SignupPage />} />
@@ -54,6 +56,7 @@ function App() {
               element={<DesignRaisedBedPage />}
             />
           </Routes>
+          <Footer />
         </div>
       </raisedBedContext.Provider>
     </userContext.Provider>

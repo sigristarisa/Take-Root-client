@@ -38,7 +38,7 @@ header {
 
 main {
   width: 100vw;
-  height: 90vh;
+  height: 85vh;
   background-color: var(--sand-20);
   overflow: scroll;
   display: grid;
@@ -48,4 +48,12 @@ main {
 
 button {
   cursor: pointer;
+}
+
+footer {
+  width: 100vw;
+  height: 5vh;
+  background-color: var(--sand-20);
+  display: grid;
+  place-items: center;
 }
