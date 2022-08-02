@@ -5,6 +5,7 @@
   display: grid;
   place-items: center;
   gap: 20px;
+  color: var(--green);
   background-color: var(--sand-60);
   border-radius: 48px;
 }
@@ -26,6 +27,32 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: end;
   gap: 20px;
+}
+
+.signup-later-btn {
+  font-size: var(--font-s);
+  color: var(--grape-100);
+  background-color: transparent;
+  text-decoration: underline;
+  border: none;
+}
+
+.signup-later-btn:hover {
+  color: var(--grape-hover);
+}
+
+.signup-submit-btn {
+  height: 40px;
+  margin-right: 8px;
+  font-size: var(--font-s);
+  color: var(--sand-20);
+  background-color: var(--grape-100);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.signup-submit-btn:hover {
+  background-color: var(--grape-hover);
 }

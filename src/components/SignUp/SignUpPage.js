@@ -61,8 +61,11 @@ const SignupForm = () => {
           handleChange={handleUserData}
         />
         <div className='signup-btn-container'>
-          <button onClick={() => navigate("../", { replace: true })}>
-            No, register later
+          <button
+            className='signup-later-btn'
+            onClick={() => navigate("../login", { replace: true })}
+          >
+            Or login
           </button>
           <input
             className='signup-submit-btn'
