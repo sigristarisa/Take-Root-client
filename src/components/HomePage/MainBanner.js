@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { userContext } from "../../helpers/createContext";
-
 import mainImage from "../../assets/main-image.png";
 
 const MainBanner = ({ isLoggedIn }) => {
@@ -9,7 +8,7 @@ const MainBanner = ({ isLoggedIn }) => {
     <section className='main-container'>
       <img src={mainImage} alt='logo' className='logo' />
       <div>
-        {isLoggedIn(user) ? (
+        {isLoggedIn() ? (
           <h1>Welcome {user.userName}!</h1>
         ) : (
           <h1>Welcome to Take Root.</h1>

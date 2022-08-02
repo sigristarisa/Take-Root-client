@@ -71,9 +71,9 @@
   padding: 40px;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  color: var(--sand-60);
   background-color: var(--green);
   border-radius: 40px;
-  color: var(--sand-60);
 }
 
 .method-container h4 {
@@ -82,4 +82,15 @@
 
 .method-container p {
   font-size: var(--font-m);
+}
+
+.create-raised-bed-btn {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  color: var(--sand-60);
+  background-color: var(--green);
+  border-radius: 40px;
+  cursor: pointer;
 }

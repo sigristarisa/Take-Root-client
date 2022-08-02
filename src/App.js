@@ -21,10 +21,9 @@ function App() {
   const [user, setUser] = useState(initialUserState);
   const [raisedBed, setRaisedBed] = useState({});
 
-  const isLoggedIn = (user) => {
-    const userDataArr = Object.values(user);
-    const notEmpty = userDataArr.find((userData) => userData !== "");
-    return notEmpty ? true : false;
+  const isLoggedIn = () => {
+    const { email, password } = user;
+    return !email || !password ? false : true;
   };
 
   useEffect(() => {

@@ -17,15 +17,20 @@ const SquareListItem = ({ square, index, squareId, setSquareId }) => {
     });
   };
 
+  const highlightClickedSquare = (clickedSquareId) => {
+    return clickedSquareId === squareId ? "clicked" : "";
+  };
+
   return (
     <li
       key={index}
-      className='square-container square-list-item'
+      className={`square-container square-list-item ${highlightClickedSquare(
+        square.id
+      )}`}
       onClick={() => getSquareId(square.id)}
       onDrop={(e) => drop(e)}
       onDragOver={(e) => e.preventDefault()}
     >
-      <p>{square.id}</p>
       {square.plantId && (
         <img
           src={`http://localhost:4000${square.plant.imagePerSquare}`}

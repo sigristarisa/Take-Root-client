@@ -80,3 +80,7 @@
 .saved {
   pointer-events: none;
 }
+
+.clicked {
+  border: orange 5px solid;
+}
