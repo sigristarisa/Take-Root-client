@@ -23,15 +23,15 @@ function App() {
   const [raisedBed, setRaisedBed] = useState({});
 
   const isLoggedIn = () => {
-    const { email, password } = user;
-    return !email || !password ? false : true;
+    const loggedInUser = localStorage.getItem("user");
+    return loggedInUser ? true : false;
   };
 
   useEffect(() => {
-    const loggedInUser = localStorage.getItem("user");
-    if (!loggedInUser) {
+    if (!isLoggedIn()) {
       setUser(initialUserState);
     } else {
+      const loggedInUser = localStorage.getItem("user");
       const foundUser = JSON.parse(loggedInUser);
       setUser(foundUser);
     }
