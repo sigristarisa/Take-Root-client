@@ -8,12 +8,20 @@
 
 .logo-title {
   height: 70%;
-  margin: 0px;
   text-align: center;
   font-family: "Corben";
   font-size: var(--font-xs);
   color: var(--green);
   background-color: transparent;
+  border: none;
+}
+
+.header-green {
+  height: 70%;
+  text-align: center;
+  font-family: "Corben";
+  font-size: var(--font-xs);
+  color: var(--sand-20);
   border: none;
 }
 
@@ -53,15 +61,16 @@
 }
 
 .user-btn {
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: solid 4px var(--green);
+  border: solid 2px var(--green);
   display: grid;
   place-items: center;
 }
 .user-btn img {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
+  padding-right: 8px;
   object-fit: contain;
 }

@@ -20,6 +20,7 @@ function App() {
 
   const [user, setUser] = useState(initialUserState);
   const [raisedBed, setRaisedBed] = useState({});
+  const [headerColor, setHeaderColor] = useState("");
 
   const isLoggedIn = () => {
     const loggedInUser = localStorage.getItem("user");
@@ -38,12 +39,25 @@ function App() {
 
   return (
     <userContext.Provider value={{ user, setUser }}>
-      <raisedBedContext.Provider value={{ raisedBed, setRaisedBed }}>
+      <raisedBedContext.Provider value={{ raisedBed }}>
         <div className='App'>
-          <Header isLoggedIn={isLoggedIn} initialUserState={initialUserState} />
+          <Header
+            isLoggedIn={isLoggedIn}
+            initialUserState={initialUserState}
+            headerColor={headerColor}
+            setHeaderColor={setHeaderColor}
+          />
 
           <Routes>
-            <Route path={"/"} element={<HomePage isLoggedIn={isLoggedIn} />} />
+            <Route
+              path={"/"}
+              element={
+                <HomePage
+                  isLoggedIn={isLoggedIn}
+                  setHeaderColor={setHeaderColor}
+                />
+              }
+            />
             <Route path={"/signup"} element={<SignupPage />} />
             <Route path={"/login"} element={<LoginPage />} />
             <Route

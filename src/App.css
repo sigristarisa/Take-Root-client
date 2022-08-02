@@ -37,6 +37,11 @@ header {
   background-color: var(--sand-20);
 }
 
+.header-green {
+  color: var(--sand-20);
+  background-color: var(--green);
+}
+
 main {
   width: 100vw;
   height: 85vh;

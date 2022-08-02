@@ -4,12 +4,14 @@ import Methods from "./Methods";
 import CreateRaisedBedButton from "./CreateRaisedBedButton";
 import "./HomePage.css";
 
-const HomePage = ({ isLoggedIn }) => {
+const HomePage = ({ isLoggedIn, setHeaderColor }) => {
   return (
     <div>
       <main>
         <MainBanner isLoggedIn={isLoggedIn} />
-        {isLoggedIn() && <CreateRaisedBedButton />}
+        {isLoggedIn() && (
+          <CreateRaisedBedButton setHeaderColor={setHeaderColor} />
+        )}
         <HowItWorks />
         <Methods />
       </main>
