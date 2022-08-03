@@ -31,6 +31,12 @@ const client = {
     // }
     return axios.patch(url, data);
   },
+
+  delete: (path) => {
+    const url = `${host}${path}`;
+
+    return axios.delete(url);
+  },
 };
 
 export default client;

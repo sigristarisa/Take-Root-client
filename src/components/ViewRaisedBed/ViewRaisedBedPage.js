@@ -3,18 +3,22 @@ import { useNavigate } from "react-router-dom";
 import client from "../../helpers/client";
 import { userContext } from "../../helpers/createContext";
 import ViewRaisedBedListItem from "./ViewRaisedBedListItem";
+import plusLogo from "../../assets/plus-logo.png";
 import "./ViewRaisedBedPage.css";
 
 const ViewRaisedBedPage = () => {
   const { user } = useContext(userContext);
   const [raisedBedList, setRaisedBedList] = useState([]);
+  const [deleted, setDeleted] = useState({});
   const navigate = useNavigate();
+
+  console.log("raisedBedList", raisedBedList);
 
   useEffect(() => {
     client
       .get(`/raisedbed/user/${user.id}`)
       .then((res) => setRaisedBedList(res.data.raisedBed));
-  }, []);
+  }, [deleted]);
 
   return (
     <main className='view-raisedbed-main'>
@@ -22,13 +26,17 @@ const ViewRaisedBedPage = () => {
       <div>
         <ul className='view-raisedbed-list'>
           {raisedBedList.map((raisedBed, index) => (
-            <ViewRaisedBedListItem raisedBed={raisedBed} index={index} />
+            <ViewRaisedBedListItem
+              raisedBed={raisedBed}
+              index={index}
+              setDeleted={setDeleted}
+            />
           ))}
           <li
             className='preview-mini-raisedbed-container create-raisedbed-btn'
             onClick={() => navigate("../create-raised-bed")}
           >
-            Create New RaisedBed
+            <img src={plusLogo} alt='plus' />
           </li>
         </ul>
       </div>
