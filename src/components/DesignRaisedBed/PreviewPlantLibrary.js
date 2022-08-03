@@ -1,5 +1,6 @@
 import PlantLibrary from "./PlantLibrary";
 import ButtonBar from "./ButtonBar";
+import shovel from "../../assets/shaberu.png";
 
 const PreviewPlantLibrary = ({
   squareId,
@@ -11,6 +12,7 @@ const PreviewPlantLibrary = ({
     <aside className='preview-plant-library-container'>
       <div className='plant-library-text'>
         <h1>Plant Library</h1>
+        <img src={shovel} alt='shovel icon' />
         <p>
           Click a square and drag your plant of choice.
           <br />

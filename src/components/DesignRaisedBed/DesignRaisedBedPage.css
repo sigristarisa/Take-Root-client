@@ -14,6 +14,16 @@
   place-items: center;
 }
 
+.plant-library-text {
+  display: grid;
+  place-items: center;
+}
+
+.plant-library-text img {
+  width: 40px;
+  height: 40px;
+}
+
 .plant-library-text h1 {
   margin: 0px;
   font-size: var(--font-xl);
@@ -26,7 +36,7 @@
 
 .plant-library-list {
   width: 40vw;
-  height: 50vh;
+  height: 45vh;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -118,7 +128,7 @@
 
 .plant-btn-container {
   width: 100%;
-  margin-top: 12px;
+  margin-top: 1em;
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
