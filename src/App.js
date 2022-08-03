@@ -7,6 +7,7 @@ import SignupPage from "./components/Signup/SignupPage";
 import LoginPage from "./components/Signup/LoginPage";
 import CreateSquaresPage from "./components/CreateSquares/CreateSquaresPage";
 import DesignRaisedBedPage from "./components/DesignRaisedBed/DesignRaisedBedPage";
+import ViewRaisedBedPage from "./components/ViewRaisedBed/ViewRaisedBedPage";
 import Footer from "./components/HomePage/Footer";
 import "./App.css";
 
@@ -68,6 +69,7 @@ function App() {
               path={"/design-raised-bed"}
               element={<DesignRaisedBedPage />}
             />
+            <Route path={"/view-raised-bed"} element={<ViewRaisedBedPage />} />
           </Routes>
           <Footer />
         </div>

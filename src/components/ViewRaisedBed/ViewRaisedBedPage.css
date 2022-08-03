@@ -1,0 +1,35 @@
+.view-raisedbed-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.preview-mini-raisedbed-container {
+  width: 320px;
+  height: 320px;
+  background-color: white;
+  border: red solid 1px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+.mini-raisedbed-container {
+  border: 1px solid blue;
+  display: grid;
+  place-items: center;
+}
+
+.mini-square-container {
+  width: 64px;
+  height: 64px;
+  border: black dotted 1px;
+  display: grid;
+  place-items: center;
+}
+
+.miniture-soil-container {
+  width: 48px;
+  height: 48px;
+  background-color: var(--sand-60);
+  border-radius: 12px;
+}
