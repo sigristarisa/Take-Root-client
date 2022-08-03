@@ -10,10 +10,10 @@ const HomePage = ({ isLoggedIn, setHeaderColor }) => {
     <main className='home-page-main'>
       <MainBanner isLoggedIn={isLoggedIn} />
       {isLoggedIn() && (
-        <div className='raised-bed-btn-container'>
+        <section className='raised-bed-btn-container'>
           <CreateRaisedBedButton setHeaderColor={setHeaderColor} />
           <ViewRaisedBedButton />
-        </div>
+        </section>
       )}
       <HowItWorks />
       <Methods />

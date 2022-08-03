@@ -29,7 +29,7 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit} className='login-form'>
         <h1>Login</h1>
         <FormInput
-          label={"Email address"}
+          label={"Email address*"}
           name={"email"}
           type={"email"}
           value={user.email}
@@ -37,7 +37,7 @@ const LoginForm = () => {
           handleChange={handleUserData}
         />
         <FormInput
-          label={"Password"}
+          label={"Password*"}
           name={"password"}
           type={"password"}
           value={user.password}

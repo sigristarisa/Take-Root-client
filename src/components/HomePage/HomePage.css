@@ -2,29 +2,27 @@
   background-color: var(--sand-20);
   display: grid;
   place-items: center;
-  gap: 88px;
+  gap: 7em;
 }
 
 .main-container {
   width: 90vw;
   height: 65vh;
-  margin: 40px;
-  padding: 40px;
+  padding: 1em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   color: var(--green);
   background-color: var(--sand-60);
-  border-radius: 40px;
+  border-radius: var(--radius-m);
 }
 
 .main-container h1 {
   font-size: var(--font-xxl);
   line-height: 1.2em;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .main-container h2 {
-  margin-bottom: 60px;
   font-weight: 400;
   font-size: var(--font-l);
   line-height: 1.2em;
@@ -35,11 +33,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
-  gap: 40px;
+  gap: 2em;
 }
 
 .how-it-works-container {
-  padding: 40px;
   width: 100vw;
   height: 60vh;
   display: grid;
@@ -48,7 +45,6 @@
 }
 
 .how-it-works-container h3 {
-  margin-bottom: 100px;
   font-size: var(--font-l);
   font-weight: 700;
 }
@@ -56,7 +52,7 @@
 .steps-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 2em;
   font-size: var(--font-m);
   line-height: 1.5em;
 }
@@ -64,9 +60,9 @@
 .step-container {
   width: 20vw;
   height: 30vh;
-  padding: 2rem;
+  padding: 2em;
   background-color: var(--sand-60);
-  border-radius: 40px;
+  border-radius: var(--radius-m);
   display: grid;
   place-items: center;
   position: relative;
@@ -75,26 +71,27 @@
 .step-container img {
   height: 80%;
   position: absolute;
-  top: -96px;
+  top: -6em;
 }
 
 .step-text h4 {
-  margin-top: 96px;
-  margin-bottom: 0px;
+  margin-top: 6em;
+  margin-bottom: 0;
 }
 
 .step-text p {
-  margin-top: 0px;
+  margin: 0;
   font-size: var(--font-m);
 }
 
 #methods-container {
+  width: 90vw;
   height: 85vh;
-  padding: 40px;
+  padding: 2em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 40px;
+  gap: 2em;
 }
 
 #methods-container h3 {
@@ -105,53 +102,55 @@
 
 .method-container {
   height: 60vh;
-  padding: 40px;
+  padding: 2em;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   color: var(--sand-60);
   background-color: var(--green);
-  border-radius: 40px;
+  border-radius: var(--radius-m);
 }
 
 .method-container h4 {
   font-size: var(--font-xl);
-  margin: 0px;
+  margin: 0;
 }
 
 .method-container p {
   font-size: var(--font-m);
 }
 
-.create-raised-bed-btn {
-  padding: 40px;
+.create-raised-bed-btn,
+.view-raised-bed-btn {
+  padding: 2em;
   display: grid;
   grid-template-columns: 1fr 2fr;
   place-items: center;
   color: var(--sand-60);
   background-color: var(--green);
-  border-radius: 40px;
-  cursor: pointer;
-}
-.view-raised-bed-btn {
-  padding: 40px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  place-items: center;
-  color: var(--green);
-  background-color: var(--sand-60);
-  border-radius: 40px;
+  border-radius: var(--radius-m);
   cursor: pointer;
 }
 
+.view-raised-bed-btn {
+  color: var(--green);
+  background-color: var(--sand-60);
+}
+
+.create-raised-bed-btn h2,
+.view-raised-bed-btn h2 {
+  font-size: var(--font-xl);
+  line-height: 1.5em;
+}
+
 .lets-get-started-btn {
-  width: 200px;
-  height: 40px;
-  margin-right: 8px;
+  width: 10vw;
+  height: 4vh;
+  margin-right: 16px;
   font-size: var(--font-s);
   color: var(--sand-20);
   background-color: var(--grape-100);
-  border-radius: 12px;
+  border-radius: var(--radius-s);
   border: none;
 }
 

@@ -8,8 +8,8 @@ const MainBanner = ({ isLoggedIn }) => {
   const navigate = useNavigate();
   return (
     <section className='main-container'>
-      <img src={mainImage} alt='logo' className='logo' />
-      <div>
+      <img src={mainImage} alt='main icon' />
+      <div className='main-text-container'>
         {isLoggedIn() ? (
           <h1>
             Welcome <br />

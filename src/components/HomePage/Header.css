@@ -1,5 +1,5 @@
 .login-signup-header {
-  padding: 0 40px;
+  padding: 0 2em;
   display: grid;
   grid-template-columns: auto 1fr auto;
   place-items: center;
@@ -16,12 +16,17 @@
   border: none;
 }
 
-.header-green {
+.logo-title h1 {
+  margin: 0;
+}
+
+.header-greenlogo-title {
   height: 70%;
   text-align: center;
   font-family: "Corben";
   font-size: var(--font-xs);
   color: var(--sand-20);
+  background-color: transparent;
   border: none;
 }
 
@@ -48,11 +53,11 @@
 }
 
 .signup-btn {
-  width: 120px;
-  height: 32px;
+  width: 6vw;
+  height: 3vh;
   color: var(--sand-20);
   background-color: var(--green);
-  border-radius: 12px;
+  border-radius: var(--radius-s);
   border: none;
 }
 

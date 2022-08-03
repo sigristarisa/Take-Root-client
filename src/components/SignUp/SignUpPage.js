@@ -29,7 +29,7 @@ const SignupForm = () => {
       <form className='signup-form' onSubmit={handleSubmit}>
         <h1>Register</h1>
         <FormInput
-          label={"Choose your username"}
+          label={"Choose your username*"}
           name={"userName"}
           type={"text"}
           value={user.userName}
@@ -37,7 +37,7 @@ const SignupForm = () => {
           handleChange={handleUserData}
         />
         <FormInput
-          label={"What is your Email address"}
+          label={"What is your Email address*"}
           name={"email"}
           type={"email"}
           value={user.email}
@@ -45,7 +45,7 @@ const SignupForm = () => {
           handleChange={handleUserData}
         />
         <FormInput
-          label={"Choose your password"}
+          label={"Choose your password*"}
           name={"password"}
           type={"password"}
           value={user.password}
@@ -53,7 +53,7 @@ const SignupForm = () => {
           handleChange={handleUserData}
         />
         <FormInput
-          label={"Confirm password"}
+          label={"Confirm password*"}
           name={"confirmPassword"}
           type={"password"}
           value={user.confirmPassword}

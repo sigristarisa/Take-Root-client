@@ -20,7 +20,7 @@ const Header = ({
     <header className={`login-signup-header ${headerColor}`}>
       <div className='space'></div>
       <button
-        className={`logo-title  ${headerColor}`}
+        className={`${headerColor}logo-title`}
         onClick={() => changeHeaderNeutral()}
       >
         <h1>TAKE ROOT</h1>

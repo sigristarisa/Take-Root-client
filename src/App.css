@@ -17,12 +17,16 @@ html {
   --carrot: #db471e;
 
   /* font size*/
-  --font-xs: 12px;
-  --font-s: 16px;
-  --font-m: 24px;
-  --font-l: 32px;
-  --font-xl: 56px;
-  --font-xxl: 96px;
+  --font-xs: 0.75em;
+  --font-s: 1em;
+  --font-m: 1.2em;
+  --font-l: 2em;
+  --font-xl: 4em;
+  --font-xxl: 6em;
+
+  /*border radius*/
+  --radius-s: 0.5em;
+  --radius-m: 2em;
 
   scroll-behavior: smooth;
 }
@@ -41,6 +45,7 @@ header {
 }
 
 .header-green {
+  width: 100vw;
   height: 10vh;
   color: var(--sand-20);
   background-color: var(--green);
@@ -58,6 +63,7 @@ button {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 footer {
