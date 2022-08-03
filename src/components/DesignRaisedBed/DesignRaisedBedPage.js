@@ -19,6 +19,7 @@ const DesignRaisedBedPage = () => {
     setIsSaved(true);
     setNotClickable("saved");
     setSquareId(0);
+    setIsSubmitted(false);
   };
 
   const editRaisedBed = () => {

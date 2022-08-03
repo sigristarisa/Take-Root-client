@@ -1,10 +1,12 @@
 import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import client from "../../helpers/client";
 import { raisedBedContext } from "../../helpers/createContext";
 
-const NameRaisedBed = ({ editRaisedBed, setSubmitted }) => {
+const NameRaisedBed = ({ editRaisedBed, setIsSubmitted }) => {
   const [raisedBedName, setRaisedBedName] = useState({});
   const { raisedBed } = useContext(raisedBedContext);
+  const navigate = useNavigate();
 
   const handleRaisedBedName = (e) => {
     const { name, value } = e.target;
@@ -13,10 +15,10 @@ const NameRaisedBed = ({ editRaisedBed, setSubmitted }) => {
 
   const submitRaisedBedName = (e) => {
     e.preventDefault();
+    setIsSubmitted(true);
     client
       .patch(`/raisedbed/name/${raisedBed.raisedBed.id}`, raisedBedName)
-      .then((res) => console.log("what's the response", res.data))
-      .then(() => setSubmitted(true));
+      .then(() => setTimeout(() => navigate("../"), 2000));
   };
 
   return (
