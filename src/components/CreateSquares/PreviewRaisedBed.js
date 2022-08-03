@@ -16,7 +16,7 @@ const PreviewRaisedBed = ({ square }) => {
   };
 
   return (
-    <div className='preview-container'>
+    <aside className='preview-container'>
       <ul className='raised-bed-container' style={gridTemplateColumns}>
         {createSquares().map((square, index) => (
           <li key={index} className='square-container'>
@@ -24,7 +24,7 @@ const PreviewRaisedBed = ({ square }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </aside>
   );
 };
 export default PreviewRaisedBed;

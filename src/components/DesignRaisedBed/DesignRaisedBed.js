@@ -16,7 +16,7 @@ const DesignRaisedBed = ({ squareId, setSquareId, isSet, notClickable }) => {
   };
 
   return (
-    <div className='preview-container'>
+    <aside className='preview-container'>
       {isSet(raisedBed) && (
         <ul
           className={`raised-bed-container ${notClickable}`}
@@ -32,7 +32,7 @@ const DesignRaisedBed = ({ squareId, setSquareId, isSet, notClickable }) => {
           ))}
         </ul>
       )}
-    </div>
+    </aside>
   );
 };
 export default DesignRaisedBed;

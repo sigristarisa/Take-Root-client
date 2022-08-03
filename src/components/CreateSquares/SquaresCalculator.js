@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { userContext, raisedBedContext } from "../../helpers/createContext";
 import SizeDropDown from "./SizeDropDown";
 import client from "../../helpers/client";
+import shovel from "../../assets/shaberu.png";
 
 const SquaresCalculator = ({ square, setSquare, setHeaderColor }) => {
   const { user } = useContext(userContext);
@@ -27,9 +28,10 @@ const SquaresCalculator = ({ square, setSquare, setHeaderColor }) => {
     navigate("../");
   };
   return (
-    <section className='calculator-container'>
-      <div className='calculator-main-container'>
+    <aside className='calculator-container'>
+      <section className='calculator-top-container'>
         <h1>Let's get started!</h1>
+        <img src={shovel} alt='shovel icon' />
         <p>
           Choose the size that is the closest to your raised bed. <br />
           As we are working with the square-foot method, <br />
@@ -58,9 +60,9 @@ const SquaresCalculator = ({ square, setSquare, setHeaderColor }) => {
             <input className='next-step-btn' type='submit' value='Next Step' />
           </div>
         </form>
-      </div>
+      </section>
       <div className='space'></div>
-    </section>
+    </aside>
   );
 };
 

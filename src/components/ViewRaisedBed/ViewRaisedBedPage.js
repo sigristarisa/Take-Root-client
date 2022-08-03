@@ -9,18 +9,49 @@ import "./ViewRaisedBedPage.css";
 const ViewRaisedBedPage = () => {
   const { user } = useContext(userContext);
   const [raisedBedList, setRaisedBedList] = useState([]);
-  const [deleted, setDeleted] = useState({});
-  const [willDelete, setWillDelete] = useState(false);
+  const [deletingId, setDeletingId] = useState("");
+  const [showDelete, setShowDelete] = useState(false);
+  const [confirmDelete, setConfirmDelete] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     client
       .get(`/raisedbed/user/${user.id}`)
       .then((res) => setRaisedBedList(res.data.raisedBed));
-  }, [deleted]);
+  }, [confirmDelete]);
+
+  const deleteRaisedBed = () => {
+    client.delete(`/raisedbed/${deletingId}`).then(() => {
+      setShowDelete(false);
+      setConfirmDelete(true);
+    });
+  };
 
   return (
     <main className='view-raisedbed-main'>
+      {showDelete && (
+        <div className='delete-container'>
+          <div className='delete-window'>
+            <h2>Delete</h2>
+            <p>Do you really want to delete this raised bed?</p>
+            <div className='delete-btn-container'>
+              <button
+                className='no-cancel-btn'
+                onClick={() => setShowDelete(false)}
+              >
+                No,cancel
+              </button>
+              <button
+                className='yes-delete-btn'
+                onClick={() => deleteRaisedBed()}
+              >
+                Yes, delete
+              </button>
+            </div>
+          </div>
+          <div className='delete-background'></div>
+        </div>
+      )}
       <h1>My Planned Raised Beds</h1>
       <div>
         <ul className='view-raisedbed-list'>
@@ -28,8 +59,9 @@ const ViewRaisedBedPage = () => {
             <ViewRaisedBedListItem
               raisedBed={raisedBed}
               index={index}
-              setDeleted={setDeleted}
-              setWillDelete={setWillDelete}
+              setDeletingId={setDeletingId}
+              setShowDelete={setShowDelete}
+              setConfirmDelete={setConfirmDelete}
             />
           ))}
           <li
