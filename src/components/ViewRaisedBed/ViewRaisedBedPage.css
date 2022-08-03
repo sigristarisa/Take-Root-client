@@ -1,12 +1,20 @@
-.view-raisedbed-list {
+.view-raisedbed-main {
+  background-color: var(--sand-20);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   place-items: center;
 }
 
+.view-raisedbed-list {
+  width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 64px;
+}
+
 .preview-mini-raisedbed-container {
-  width: 320px;
-  height: 320px;
+  width: 20vw;
+  height: 40vh;
   background-color: white;
   border: red solid 1px;
   border-radius: 12px;
@@ -27,9 +35,18 @@
   place-items: center;
 }
 
+.miniture-plant-container {
+  width: 56px;
+  height: 56px;
+}
+
 .miniture-soil-container {
   width: 48px;
   height: 48px;
   background-color: var(--sand-60);
   border-radius: 12px;
+}
+
+.create-raisedbed-btn {
+  cursor: pointer;
 }

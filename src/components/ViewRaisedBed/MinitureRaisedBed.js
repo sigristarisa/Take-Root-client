@@ -21,6 +21,7 @@ const MinitureRaisedBed = ({ raisedBed }) => {
             <div className='mini-square-container'>
               {square.plantId ? (
                 <img
+                  className='miniture-plant-container'
                   src={`http://localhost:4000${square.plant.imagePerSquare}`}
                   alt={`miniture ${square.plant.name}`}
                 />
