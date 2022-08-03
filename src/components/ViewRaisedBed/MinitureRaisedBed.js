@@ -1,4 +1,13 @@
-const MinitureRaisedBed = ({ raisedBed }) => {
+import client from "../../helpers/client";
+import deleteIcon from "../../assets/delete.png";
+
+const MinitureRaisedBed = ({ raisedBed, setDeleted }) => {
+  const deleteRaisedBed = (raisedBedId) => {
+    client
+      .delete(`/raisedbed/${raisedBedId}`)
+      .then((res) => setDeleted(res.data));
+  };
+
   const gridTemplateColumns = {
     gridTemplateColumns: `repeat(${raisedBed.columns}, 1fr)`,
   };
@@ -20,6 +29,12 @@ const MinitureRaisedBed = ({ raisedBed }) => {
           </div>
         ))}
       </div>
+      <button
+        onClick={() => deleteRaisedBed(raisedBed.id)}
+        className='delete-btn'
+      >
+        <img src={deleteIcon} alt='delete-icon' />
+      </button>
     </div>
   );
 };

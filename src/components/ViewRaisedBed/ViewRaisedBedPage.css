@@ -1,4 +1,5 @@
 .view-raisedbed-main {
+  color: var(--green);
   background-color: var(--sand-20);
   display: grid;
   place-items: center;
@@ -15,12 +16,15 @@
 .preview-mini-raisedbed-container {
   width: 20vw;
   height: 40vh;
+  margin-bottom: 20px;
   background-color: white;
   border: red solid 1px;
   border-radius: 12px;
   display: grid;
   place-items: center;
+  position: relative;
 }
+
 .mini-raisedbed-container {
   border: 1px solid blue;
   display: grid;
@@ -49,4 +53,28 @@
 
 .create-raisedbed-btn {
   cursor: pointer;
+}
+
+.date-text {
+  margin: 0;
+  font-size: var(--font-xs);
+}
+
+.name-text {
+  margin: 0;
+}
+
+.delete-btn {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 8px;
+  right: 20px;
+}
+
+.delete-btn img {
+  width: 32px;
+  height: 32px;
 }

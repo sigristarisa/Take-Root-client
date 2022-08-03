@@ -10,9 +10,8 @@ const ViewRaisedBedPage = () => {
   const { user } = useContext(userContext);
   const [raisedBedList, setRaisedBedList] = useState([]);
   const [deleted, setDeleted] = useState({});
+  const [willDelete, setWillDelete] = useState(false);
   const navigate = useNavigate();
-
-  console.log("raisedBedList", raisedBedList);
 
   useEffect(() => {
     client
@@ -30,6 +29,7 @@ const ViewRaisedBedPage = () => {
               raisedBed={raisedBed}
               index={index}
               setDeleted={setDeleted}
+              setWillDelete={setWillDelete}
             />
           ))}
           <li

@@ -2,7 +2,7 @@
   background-color: var(--sand-20);
   display: grid;
   place-items: center;
-  gap: 56px;
+  gap: 88px;
 }
 
 .main-container {
@@ -28,6 +28,14 @@
   font-weight: 400;
   font-size: var(--font-l);
   line-height: 1.2em;
+}
+
+.raised-bed-btn-container {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 40px;
 }
 
 .how-it-works-container {
@@ -122,6 +130,16 @@
   place-items: center;
   color: var(--sand-60);
   background-color: var(--green);
+  border-radius: 40px;
+  cursor: pointer;
+}
+.view-raised-bed-btn {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  color: var(--green);
+  background-color: var(--sand-60);
   border-radius: 40px;
   cursor: pointer;
 }
