@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import client from "../../helpers/client";
 import { raisedBedContext } from "../../helpers/createContext";
 
-const NameRaisedBed = ({ editRaisedBed, setIsSubmitted }) => {
+const NameRaisedBed = ({ editRaisedBed, setIsSubmitted, setHeaderColor }) => {
   const [raisedBedName, setRaisedBedName] = useState({});
   const { raisedBed } = useContext(raisedBedContext);
   const navigate = useNavigate();
@@ -18,7 +18,12 @@ const NameRaisedBed = ({ editRaisedBed, setIsSubmitted }) => {
     setIsSubmitted(true);
     client
       .patch(`/raisedbed/name/${raisedBed.raisedBed.id}`, raisedBedName)
-      .then(() => setTimeout(() => navigate("../"), 2000));
+      .then(() =>
+        setTimeout(() => {
+          navigate("../");
+          setHeaderColor("");
+        }, 2000)
+      );
   };
 
   return (

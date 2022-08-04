@@ -5,7 +5,7 @@ import NameRaisedBed from "./NameRaisedBed";
 
 import "./DesignRaisedBedPage.css";
 
-const DesignRaisedBedPage = () => {
+const DesignRaisedBedPage = ({ setHeaderColor }) => {
   const [squareId, setSquareId] = useState(0);
   const [isSaved, setIsSaved] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -32,6 +32,7 @@ const DesignRaisedBedPage = () => {
       {isSubmitted && (
         <div className='saved-container'>
           <h1>Saved!</h1>
+          <div className='saved-container-background'></div>
         </div>
       )}
       <DesignRaisedBed
@@ -44,6 +45,7 @@ const DesignRaisedBedPage = () => {
         <NameRaisedBed
           editRaisedBed={editRaisedBed}
           setIsSubmitted={setIsSubmitted}
+          setHeaderColor={setHeaderColor}
         />
       ) : (
         <PreviewPlantLibrary

@@ -114,6 +114,7 @@
 
 .method-container h4 {
   font-size: var(--font-xl);
+  line-height: 1.5em;
   margin: 0;
 }
 

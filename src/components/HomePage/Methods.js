@@ -13,7 +13,7 @@ const Methods = () => {
             <p>
               With the square-foot gardening method, you plant in blocks instead
               of traditional rows. Different crops are planted in different
-              blocks according to their size; for example, 16 radishes in one
+              blocks according to their size; for example, nine radishes in one
               square foot, or just one cabbage.
             </p>
           </div>
@@ -26,11 +26,10 @@ const Methods = () => {
           <div>
             <h4>Companion method</h4>
             <p>
-              The companion planting method in gardening is the planting of
-              different crops in proximity for any of a number of different
-              reasons, including pest control, pollination, providing habitat
-              for beneficial insects, maximizing use of space, and to otherwise
-              increase crop productivity.
+              The companion method in gardening is to plant different crops in
+              proximity for different reasons, including pest control,
+              pollination, providing habitat for beneficial insects, maximizing
+              use of space, and to otherwise increase crop productivity.
             </p>
           </div>
         </div>

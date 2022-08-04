@@ -67,7 +67,7 @@ function App() {
             />
             <Route
               path={"/design-raised-bed"}
-              element={<DesignRaisedBedPage />}
+              element={<DesignRaisedBedPage setHeaderColor={setHeaderColor} />}
             />
             <Route path={"/view-raised-bed"} element={<ViewRaisedBedPage />} />
           </Routes>
