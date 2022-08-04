@@ -6,7 +6,6 @@ const UserButton = ({ initialUserState }) => {
   const { user, setUser } = useContext(userContext);
   const navigate = useNavigate();
 
-  console.log(user.user);
   const handleLogout = () => {
     setUser(initialUserState);
     localStorage.clear();

@@ -32,7 +32,7 @@ const RaisedBedGalleryPage = () => {
       >
         <img src={telescope} alt='light bulb' />
         <div>
-          <h2>View My Raised Bed</h2>
+          <h2>View My Creations</h2>
           <p>
             What did I plant? <br />
             Let me check my raised bed again...
