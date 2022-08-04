@@ -70,7 +70,10 @@ function App() {
               path={"/design-raised-bed"}
               element={<DesignRaisedBedPage setHeaderColor={setHeaderColor} />}
             />
-            <Route path={"/view-raised-bed"} element={<ViewRaisedBedPage />} />
+            <Route
+              path={"/view-raised-bed"}
+              element={<ViewRaisedBedPage setHeaderColor={setHeaderColor} />}
+            />
             <Route
               path={"/raised-bed-gallery"}
               element={<RaisedBedGalleryPage />}

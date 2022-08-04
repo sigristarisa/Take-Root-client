@@ -7,7 +7,7 @@ import plusLogo from "../../assets/plus-logo.png";
 import inspiration from "../../assets/inspiration.png";
 import "./ViewRaisedBedPage.css";
 
-const ViewRaisedBedPage = () => {
+const ViewRaisedBedPage = ({ setHeaderColor }) => {
   const { user } = useContext(userContext);
   const [raisedBedList, setRaisedBedList] = useState([]);
   const [deletingId, setDeletingId] = useState("");
@@ -58,7 +58,10 @@ const ViewRaisedBedPage = () => {
         <ul className='view-raisedbed-list'>
           <li
             className='preview-mini-raisedbed-container create-raisedbed-btn'
-            onClick={() => navigate("../create-raised-bed")}
+            onClick={() => {
+              setHeaderColor("header-green");
+              navigate("../create-raised-bed");
+            }}
           >
             <img src={plusLogo} alt='plus' />
           </li>

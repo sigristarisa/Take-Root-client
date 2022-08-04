@@ -155,6 +155,7 @@
 .get-inspiration-container {
   width: 70vw;
   padding: 2em;
+  margin-top: 3em;
   color: var(--sand-20);
   background-color: var(--green);
   border-radius: var(--radius-m);
