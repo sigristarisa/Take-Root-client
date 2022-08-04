@@ -1,4 +1,5 @@
 import MinitureRaisedBed from "./MinitureRaisedBed";
+import formatDate from "../../helpers/formatDate";
 
 const ViewRaisedBedListItem = ({
   raisedBed,
@@ -7,11 +8,6 @@ const ViewRaisedBedListItem = ({
   setShowDelete,
   setConfirmDelete,
 }) => {
-  const formatDate = (date) => {
-    const yyyyMMDD = date.split("T");
-    return yyyyMMDD[0].replace(/-/gi, ".");
-  };
-
   return (
     <li key={index}>
       <MinitureRaisedBed

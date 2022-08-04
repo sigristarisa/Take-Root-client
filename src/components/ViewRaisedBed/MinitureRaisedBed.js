@@ -5,6 +5,7 @@ const MinitureRaisedBed = ({
   setDeletingId,
   setShowDelete,
   setConfirmDelete,
+  isInspiration,
 }) => {
   const gridTemplateColumns = {
     gridTemplateColumns: `repeat(${raisedBed.columns}, 1fr)`,
@@ -33,12 +34,14 @@ const MinitureRaisedBed = ({
           </div>
         ))}
       </div>
-      <button
-        onClick={() => renderDeleteWindow(raisedBed.id)}
-        className='delete-btn'
-      >
-        <img src={deleteIcon} alt='delete-icon' />
-      </button>
+      {!isInspiration && (
+        <button
+          onClick={() => renderDeleteWindow(raisedBed.id)}
+          className='delete-btn'
+        >
+          <img src={deleteIcon} alt='delete-icon' />
+        </button>
+      )}
     </div>
   );
 };

@@ -8,6 +8,7 @@ import LoginPage from "./components/Signup/LoginPage";
 import CreateSquaresPage from "./components/CreateSquares/CreateSquaresPage";
 import DesignRaisedBedPage from "./components/DesignRaisedBed/DesignRaisedBedPage";
 import ViewRaisedBedPage from "./components/ViewRaisedBed/ViewRaisedBedPage";
+import RaisedBedGalleryPage from "./components/RaisedBedGallery/RaisedBedGalleryPage";
 import Footer from "./components/HomePage/Footer";
 import "./App.css";
 
@@ -70,6 +71,10 @@ function App() {
               element={<DesignRaisedBedPage setHeaderColor={setHeaderColor} />}
             />
             <Route path={"/view-raised-bed"} element={<ViewRaisedBedPage />} />
+            <Route
+              path={"/raised-bed-gallery"}
+              element={<RaisedBedGalleryPage />}
+            />
           </Routes>
           <Footer />
         </div>
