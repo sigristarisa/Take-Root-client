@@ -7,7 +7,7 @@ const RaisedBedGalleryItem = ({ inspiration, index }) => {
       <MinitureRaisedBed raisedBed={inspiration} isInspiration={true} />
       <p className='date-text'>{formatDate(inspiration.createdAt)}</p>
       <p className='name-text'>{inspiration.name}</p>
-      <p>{`Created by ${inspiration.userId}`}</p>
+      <p className='user-name-text'>{`Created by ${inspiration.user.userName}`}</p>
     </li>
   );
 };

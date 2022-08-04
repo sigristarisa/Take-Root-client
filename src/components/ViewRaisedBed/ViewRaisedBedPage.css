@@ -65,6 +65,11 @@
   margin: 0;
 }
 
+.user-name-text {
+  margin: 0;
+  font-size: var(--font-xs);
+}
+
 .delete-btn {
   width: 32px;
   height: 32px;
@@ -145,4 +150,31 @@
 
 .yes-delete-btn:hover {
   background-color: var(--grape-hover);
+}
+
+.get-inspiration-container {
+  width: 70vw;
+  padding: 2em;
+  color: var(--sand-20);
+  background-color: var(--green);
+  border-radius: var(--radius-m);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  cursor: pointer;
+}
+
+.get-inspiration-container h2 {
+  font-size: var(--font-xl);
+  line-height: 1.5em;
+}
+
+.get-inspiration-container p {
+  font-size: var(--font-m);
+  line-height: 1.5em;
+}
+
+.get-inspiration-container img {
+  width: 240px;
+  height: 280px;
 }

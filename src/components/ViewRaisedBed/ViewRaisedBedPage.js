@@ -4,6 +4,7 @@ import client from "../../helpers/client";
 import { userContext } from "../../helpers/createContext";
 import ViewRaisedBedListItem from "./ViewRaisedBedListItem";
 import plusLogo from "../../assets/plus-logo.png";
+import inspiration from "../../assets/inspiration.png";
 import "./ViewRaisedBedPage.css";
 
 const ViewRaisedBedPage = () => {
@@ -71,6 +72,19 @@ const ViewRaisedBedPage = () => {
             />
           ))}
         </ul>
+      </div>
+      <div
+        className='get-inspiration-container'
+        onClick={() => navigate("/raised-bed-gallery")}
+      >
+        <img src={inspiration} alt='light bulb' />
+        <div>
+          <h2>Get Some Inspirations</h2>
+          <p>
+            What did others plant? <br />
+            See our communities' raised beds ...
+          </p>
+        </div>
       </div>
     </main>
   );
