@@ -55,6 +55,12 @@ const ViewRaisedBedPage = () => {
       <h1>My Planned Raised Beds</h1>
       <div>
         <ul className='view-raisedbed-list'>
+          <li
+            className='preview-mini-raisedbed-container create-raisedbed-btn'
+            onClick={() => navigate("../create-raised-bed")}
+          >
+            <img src={plusLogo} alt='plus' />
+          </li>
           {raisedBedList.map((raisedBed, index) => (
             <ViewRaisedBedListItem
               raisedBed={raisedBed}
@@ -64,12 +70,6 @@ const ViewRaisedBedPage = () => {
               setConfirmDelete={setConfirmDelete}
             />
           ))}
-          <li
-            className='preview-mini-raisedbed-container create-raisedbed-btn'
-            onClick={() => navigate("../create-raised-bed")}
-          >
-            <img src={plusLogo} alt='plus' />
-          </li>
         </ul>
       </div>
     </main>
