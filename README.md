@@ -33,8 +33,10 @@ In order to make gardening not only effective and sufficient BUT ALSO easy and s
 - React.js
 - CSS
 
-**Backend** repository is [here](https://github.com/sigristarisa/Take-Root-server)
+**Backend** 
 - Express.js
 - Prisma
-- PostgreSQL
+- PostgreSQL<br/>
+ 
+=> *backend repository is found [here](https://github.com/sigristarisa/Take-Root-server)*
 
