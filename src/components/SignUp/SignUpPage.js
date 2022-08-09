@@ -5,7 +5,7 @@ import client from "../../helpers/client";
 import FormInput from "./FormInput";
 import "./Signup.css";
 
-const SignupForm = () => {
+const SignupPage = () => {
   const { user, setUser } = useContext(userContext);
   const navigate = useNavigate();
 
@@ -78,4 +78,4 @@ const SignupForm = () => {
   );
 };
 
-export default SignupForm;
+export default SignupPage;

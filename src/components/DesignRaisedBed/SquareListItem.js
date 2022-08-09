@@ -5,8 +5,6 @@ import client from "../../helpers/client";
 const SquareListItem = ({ square, index, squareId, setSquareId }) => {
   const { raisedBed, setRaisedBed } = useContext(raisedBedContext);
 
-  const getSquareId = (squareId) => setSquareId(squareId);
-
   const drop = (e) => {
     const plantId = e.dataTransfer.getData("plantId");
     const idObj = { squareId: Number(squareId), plantId: Number(plantId) };
@@ -27,7 +25,7 @@ const SquareListItem = ({ square, index, squareId, setSquareId }) => {
       className={`square-container square-list-item ${highlightClickedSquare(
         square.id
       )}`}
-      onClick={() => getSquareId(square.id)}
+      onClick={() => setSquareId(square.id)}
       onDrop={(e) => drop(e)}
       onDragOver={(e) => e.preventDefault()}
     >
