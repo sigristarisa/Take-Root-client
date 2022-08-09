@@ -75,12 +75,13 @@
 }
 
 .drop-down label {
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
 }
 
 .select-box {
   width: 10vw;
   height: 5vh;
+  font-size: var(--font-s);
   padding: 1em;
   border: none;
   border-radius: var(--radius-s);
