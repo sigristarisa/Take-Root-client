@@ -4,7 +4,7 @@ import { userContext, raisedBedContext } from "./helpers/createContext";
 import Header from "./components/HomePage/Header";
 import HomePage from "./components/HomePage/HomePage";
 import SignupPage from "/src/components/Signup/SignupPage";
-import LoginPage from "./components/Signup/LoginPage";
+import LoginPage from "/src/components/Signup/LoginPage";
 import CreateSquaresPage from "./components/CreateSquares/CreateSquaresPage";
 import DesignRaisedBedPage from "./components/DesignRaisedBed/DesignRaisedBedPage";
 import ViewRaisedBedPage from "./components/ViewRaisedBed/ViewRaisedBedPage";
