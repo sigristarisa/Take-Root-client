@@ -6,11 +6,11 @@
 
 .signup-form,
 .login-form {
-  width: 20vw;
-  padding: 2em;
+  width: 25vw;
+  padding: 0 2em 1em 2em;
   display: grid;
   place-items: center;
-  gap: 2em;
+  gap: var(--font-xs);
   color: var(--green);
   background-color: var(--sand-60);
   border-radius: var(--radius-m);
@@ -25,7 +25,7 @@
 }
 
 .form-input {
-  width: 17vw;
+  width: 20vw;
   height: 3em;
   padding: 1em;
   border: none;
