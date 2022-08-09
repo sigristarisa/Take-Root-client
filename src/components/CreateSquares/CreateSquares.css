@@ -1,7 +1,7 @@
 .create-squares-page-main {
   background-color: white;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
 }
 
 .preview-container {

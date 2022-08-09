@@ -22,7 +22,7 @@ const Methods = () => {
       <div>
         <h3>Method 2</h3>
         <div className='method-container'>
-          <img src={method2} alt='method-2' className='logo' />
+          <img src={method2} alt='method-2' />
           <div>
             <h4>Companion method</h4>
             <p>

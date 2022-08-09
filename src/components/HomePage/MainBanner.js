@@ -19,8 +19,9 @@ const MainBanner = ({ isLoggedIn }) => {
           <h1>Welcome to Take Root.</h1>
         )}
         <h2>
-          The first online garden planner, combining <br />
-          the square-foot method and the companion method.
+          The first online garden planner,
+          <br /> combining the square-foot method and <br />
+          the companion method.
         </h2>
         <div>
           {!isLoggedIn() && (

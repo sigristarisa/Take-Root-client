@@ -41,7 +41,7 @@ const LoginPage = () => {
           name={"password"}
           type={"password"}
           value={user.password}
-          placeholder={"enter your password here"}
+          placeholder={"Enter your password"}
           handleChange={handleUserData}
         />
         <div className='signup-btn-container'>

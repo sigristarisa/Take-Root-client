@@ -17,12 +17,12 @@ html {
   --carrot: #db471e;
 
   /* font size*/
-  --font-xs: 0.75em;
-  --font-s: 1em;
-  --font-m: 1.2em;
-  --font-l: 2em;
-  --font-xl: 3.5em;
-  --font-xxl: 6em;
+  --font-xs: 0.5vw;
+  --font-s: 0.75vw;
+  --font-m: 1.2vw;
+  --font-l: 2vw;
+  --font-xl: 3vw;
+  --font-xxl: 5vw;
 
   /*border radius*/
   --radius-s: 0.5em;
