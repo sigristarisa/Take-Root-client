@@ -9,6 +9,8 @@ const SignupPage = () => {
   const { user, setUser } = useContext(userContext);
   const navigate = useNavigate();
 
+  console.log("hello");
+
   const handleUserData = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
