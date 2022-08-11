@@ -22,7 +22,7 @@ const RaisedBedGalleryPage = () => {
       <div>
         <ul className='view-raisedbed-list'>
           {inspirations.map((inspiration, index) => (
-            <RaisedBedGalleryItem inspiration={inspiration} index={index} />
+            <RaisedBedGalleryItem inspiration={inspiration} key={index} />
           ))}
         </ul>
       </div>

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const PlantLibraryItem = ({ plant, index, companionData, isSet }) => {
+const PlantLibraryItem = ({ plant, key, companionData, isSet }) => {
   const dragPlant = useRef();
 
   const dragStart = (e, plantId) => {
@@ -30,10 +30,10 @@ const PlantLibraryItem = ({ plant, index, companionData, isSet }) => {
   };
 
   return (
-    <li key={index} className='plant-library-list-item'>
+    <li key={key} className='plant-library-list-item'>
       <img
         className={`${isCompanion(plant.id)}`}
-        src={`http://localhost:4000${plant.image}`}
+        src={`https://localhost:4000${plant.image}`}
         alt={`${plant.name}`}
         onDragStart={(e) => dragStart(e, plant.id)}
         draggable

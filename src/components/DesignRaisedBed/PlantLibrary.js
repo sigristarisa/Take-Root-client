@@ -24,7 +24,7 @@ const PlantLibrary = ({ squareId, isSet }) => {
         {plants.map((plant, index) => (
           <PlantLibraryItem
             plant={plant}
-            index={index}
+            key={index}
             companionData={companionData}
             isSet={isSet}
           />

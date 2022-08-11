@@ -57,6 +57,7 @@ const ViewRaisedBedPage = ({ setHeaderColor }) => {
       <div>
         <ul className='view-raisedbed-list'>
           <li
+            key='create-raisedbed-btn'
             className='preview-mini-raisedbed-container create-raisedbed-btn'
             onClick={() => {
               setHeaderColor("header-green");
@@ -69,6 +70,7 @@ const ViewRaisedBedPage = ({ setHeaderColor }) => {
             <ViewRaisedBedListItem
               raisedBed={raisedBed}
               index={index}
+              key={index}
               setDeletingId={setDeletingId}
               setShowDelete={setShowDelete}
               setConfirmDelete={setConfirmDelete}
