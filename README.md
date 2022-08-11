@@ -9,6 +9,11 @@ That is: gardeners have knowledge, lists, memos and techniques, but not the prac
 
 In order to make gardening not only effective and sufficient BUT ALSO easy and simple, Take Root was created.
 
+### Demo
+![take-root-demo](https://user-images.githubusercontent.com/90552887/183712591-2a8bd468-97fc-4b79-a7ef-3a158eb77759.gif)
+
+
+
 ### What is "Square-Foot Method"?
 **Square-foot gardening** (SFG) is a type of raised bed gardening — basically, a raised box divided into squares. With the square-foot gardening method, you plant in blocks instead of traditional rows. It’s a simple way to create easy-to-manage gardens with raised beds that need a minimum of time spent maintaining them. SFG advocates claim it produces more, uses less soil and water, and takes much less time to maintain than a traditional garden.
 
