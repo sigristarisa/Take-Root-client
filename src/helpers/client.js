@@ -34,4 +34,5 @@ const client = {
   },
 };
 
+console.log(host);
 export default client;
