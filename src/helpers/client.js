@@ -24,11 +24,6 @@ const client = {
 
   patch: (path, data) => {
     const url = `${host}${path}`;
-    // const token = localStorage.getItem(tokenKey);
-    // let headers = {};
-    // if (withToken) {
-    //   headers["Authorization"] = `Bearer ${token}`;
-    // }
     return axios.patch(url, data);
   },
 
