@@ -33,7 +33,7 @@ const PlantLibraryItem = ({ plant, key, companionData, isSet }) => {
     <li key={key} className='plant-library-list-item'>
       <img
         className={`${isCompanion(plant.id)}`}
-        src={`http://localhost:4000${plant.image}`}
+        src={`${process.env.REACT_APP_API_URL}${plant.image}`}
         alt={`${plant.name}`}
         onDragStart={(e) => dragStart(e, plant.id)}
         draggable

@@ -19,7 +19,7 @@ const UserButton = ({ initialUserState }) => {
       </button>
       <button className='user-btn'>
         <img
-          src={`http://localhost:4000${user.userImage}`}
+          src={`${process.env.REACT_APP_API_URL}${user.userImage}`}
           alt='user default'
         />
       </button>

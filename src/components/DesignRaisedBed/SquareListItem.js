@@ -31,7 +31,7 @@ const SquareListItem = ({ square, index, squareId, setSquareId }) => {
     >
       {square.plantId ? (
         <img
-          src={`http://localhost:4000${square.plant.imagePerSquare}`}
+          src={`${process.env.REACT_APP_API_URL}${square.plant.imagePerSquare}`}
           alt={`${square.plant.name} per square`}
         />
       ) : (
