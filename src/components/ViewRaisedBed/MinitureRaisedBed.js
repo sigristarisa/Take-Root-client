@@ -25,7 +25,7 @@ const MinitureRaisedBed = ({
             {square.plant ? (
               <img
                 className='miniture-plant-container'
-                src={`http://localhost:4000${square.plant.imagePerSquare}`}
+                src={`${process.env.REACT_APP_API_URL}${square.plant.imagePerSquare}`}
                 alt={`miniture ${square.plant.name}`}
               />
             ) : (
