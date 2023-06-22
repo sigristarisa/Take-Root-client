@@ -16,11 +16,11 @@ const PreviewRaisedBed = ({ square }) => {
   };
 
   return (
-    <aside className='preview-container'>
-      <ul className='raised-bed-container' style={gridTemplateColumns}>
+    <aside className="container__preview-raised-bed">
+      <ul className="container__raised-bed" style={gridTemplateColumns}>
         {createSquares().map((square, index) => (
-          <li key={index} className='square-container'>
-            <div className='soil-container'></div>
+          <li key={index} className="container__square">
+            <div className="container__soil"></div>
           </li>
         ))}
       </ul>

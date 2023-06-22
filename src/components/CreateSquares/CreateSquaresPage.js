@@ -10,7 +10,7 @@ const CreateSquaresPage = ({ setHeaderColor }) => {
   });
 
   return (
-    <main className='create-squares-page-main'>
+    <main className="main__create-squares">
       <PreviewRaisedBed square={square} />
       <SquaresCalculator
         square={square}

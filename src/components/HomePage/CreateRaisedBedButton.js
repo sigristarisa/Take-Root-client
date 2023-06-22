@@ -6,6 +6,7 @@ const CreateRaisedBedButton = ({ setHeaderColor }) => {
 
   const changeHeaderGreen = () => {
     setHeaderColor("header__green");
+    console.log("is it clicked");
     navigate("../create-raised-bed");
   };
 

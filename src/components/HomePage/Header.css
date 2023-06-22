@@ -6,6 +6,10 @@
   color: var(--green);
 }
 
+.header__green {
+  background-color: var(--green);
+}
+
 .logo-title {
   height: 70%;
   text-align: center;

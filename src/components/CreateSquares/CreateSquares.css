@@ -1,20 +1,20 @@
-.create-squares-page-main {
+.main__create-squares {
   background-color: white;
   display: grid;
   grid-template-columns: 1.3fr 1fr;
 }
 
-.preview-container {
+.container__preview-raised-bed {
   display: grid;
   place-items: center;
   overflow: scroll;
 }
 
-.raised-bed-container {
+.container__raised-bed {
   display: grid;
 }
 
-.square-container {
+.container__square {
   width: 200px;
   height: 200px;
   border: black 1px dotted;
@@ -22,7 +22,7 @@
   place-items: center;
 }
 
-.soil-container {
+.container__soil {
   width: 160px;
   height: 160px;
   background-color: var(--sand-20);
