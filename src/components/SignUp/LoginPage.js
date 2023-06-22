@@ -25,8 +25,8 @@ const LoginPage = () => {
   };
 
   return (
-    <main className='signup-login-main'>
-      <form onSubmit={handleSubmit} className='login-form'>
+    <main className="signup-login-main">
+      <form onSubmit={handleSubmit} className="login-form">
         <h1>Login</h1>
         <FormInput
           label={"Email address*"}
@@ -44,14 +44,14 @@ const LoginPage = () => {
           placeholder={"Enter your password"}
           handleChange={handleUserData}
         />
-        <div className='signup-btn-container'>
+        <div className="signup-btn-container">
           <button
-            className='signup-later-btn'
-            onClick={() => navigate("../signup", { replace: true })}
-          >
+            type="button"
+            className="signup-later-btn"
+            onClick={() => navigate("../signup", { replace: true })}>
             Or signup
           </button>
-          <input className='signup-submit-btn' type='submit' value='Login' />
+          <input className="signup-submit-btn" type="submit" value="Login" />
         </div>
       </form>
     </main>
