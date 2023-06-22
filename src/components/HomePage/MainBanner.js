@@ -26,12 +26,12 @@ const MainBanner = ({ isLoggedIn }) => {
         <div>
           {!isLoggedIn() && (
             <button
-              className="lets-get-started-btn"
+              className="btn__lets-get-started"
               onClick={() => navigate("../signup")}>
               Let's get started
             </button>
           )}
-          <a className="what-methods-btn" href="#methods-container">
+          <a className="btn__what-methods" href="#methods-container">
             What methods?
           </a>
         </div>

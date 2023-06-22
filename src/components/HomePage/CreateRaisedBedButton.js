@@ -10,7 +10,7 @@ const CreateRaisedBedButton = ({ setHeaderColor }) => {
   };
 
   return (
-    <div className="create-raised-bed-btn" onClick={() => changeHeaderGreen()}>
+    <div className="btn__create-raised-bed" onClick={() => changeHeaderGreen()}>
       <img src={snipper} alt="snipper" />
       <div>
         <h2>Create New Raised Bed</h2>

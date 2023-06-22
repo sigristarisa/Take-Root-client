@@ -6,10 +6,9 @@ const ViewRaisedBedButton = () => {
 
   return (
     <div
-      className='view-raised-bed-btn'
-      onClick={() => navigate("../view-raised-bed")}
-    >
-      <img src={telescope} alt='telescope' />
+      className="btn__view-raised-bed"
+      onClick={() => navigate("../view-raised-bed")}>
+      <img src={telescope} alt="telescope" />
       <div>
         <h2>View My Raised Beds</h2>
         <p>You can view your raised beds here</p>

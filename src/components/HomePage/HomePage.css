@@ -34,7 +34,7 @@
   line-height: 1.2em;
 }
 
-.lets-get-started-btn {
+.btn__lets-get-started {
   width: 10vw;
   height: 4vh;
   margin-right: 16px;
@@ -45,11 +45,11 @@
   border: none;
 }
 
-.lets-get-started-btn:hover {
+.btn__lets-get-started:hover {
   background-color: var(--grape-hover);
 }
 
-.what-methods-btn {
+.btn__what-methods {
   font-size: var(--font-s);
   color: var(--grape-100);
   background-color: transparent;
@@ -57,11 +57,12 @@
   border: none;
 }
 
-.what-methods-btn:hover {
+.btn__what-methods:hover {
   color: var(--grape-hover);
 }
 
-.raised-bed-btn-container {
+/* --- Create / View Raised Beds ---*/
+.container__raised-bed-btn {
   width: 90vw;
   margin-top: 6em;
   display: grid;
@@ -70,110 +71,13 @@
   gap: 2em;
 }
 
-.raised-bed-btn-container img {
+.container__raised-bed-btn img {
   width: 90%;
   height: auto;
 }
 
-/*--- How It Works */
-.how-it-works-container {
-  width: 100vw;
-  min-height: 60vh;
-  display: grid;
-  place-items: center;
-  color: var(--green);
-}
-
-.how-it-works-container h3 {
-  font-size: var(--font-l);
-  font-weight: 700;
-}
-
-.steps-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2em;
-  font-size: var(--font-m);
-  line-height: 1.5em;
-}
-
-.step-container {
-  width: 20vw;
-  height: 35vh;
-  padding: 3em;
-  background-color: var(--sand-60);
-  border-radius: var(--radius-m);
-  display: grid;
-  place-items: end;
-  position: relative;
-}
-
-.step-container img {
-  width: 100%;
-  position: absolute;
-  top: -3em;
-}
-
-.step-container__text {
-  height: 50%;
-  display: grid;
-  align-items: end;
-}
-
-.step-container__text h4 {
-  height: 100%;
-  margin: 0;
-}
-
-.step-container__text p {
-  height: 100%;
-  margin: 0;
-  font-size: var(--font-m);
-}
-
-#methods-container {
-  width: 90vw;
-  max-height: 85vh;
-  padding: 2em;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 2em;
-}
-
-#methods-container h3 {
-  font-size: var(--font-l);
-  color: var(--green);
-  text-align: center;
-}
-
-.method-container {
-  max-height: 60vh;
-  padding: 2em;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  color: var(--sand-60);
-  background-color: var(--green);
-  border-radius: var(--radius-m);
-}
-
-.method-container img {
-  width: 100%;
-}
-
-.method-container h4 {
-  font-size: var(--font-xl);
-  line-height: 1.5em;
-  margin: 0;
-}
-
-.method-container p {
-  font-size: var(--font-m);
-}
-
-.create-raised-bed-btn,
-.view-raised-bed-btn {
+.btn__create-raised-bed,
+.btn__view-raised-bed {
   padding: 2em;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -184,13 +88,111 @@
   cursor: pointer;
 }
 
-.view-raised-bed-btn {
+.btn__view-raised-bed {
   color: var(--green);
   background-color: var(--sand-60);
 }
 
-.create-raised-bed-btn h2,
-.view-raised-bed-btn h2 {
+.btn__create-raised-bed h2,
+.btn__view-raised-bed h2 {
   font-size: var(--font-xl);
   line-height: 1.5em;
+}
+
+/*--- How It Works ---*/
+.container__how-it-works {
+  width: 100vw;
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+}
+
+.container__how-it-works h3 {
+  font-size: var(--font-l);
+  font-weight: 700;
+}
+
+.container__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  font-size: var(--font-m);
+  line-height: 1.5em;
+}
+
+.container__step {
+  width: 20vw;
+  height: 35vh;
+  padding: 3em;
+  background-color: var(--sand-60);
+  border-radius: var(--radius-m);
+  display: grid;
+  place-items: end;
+  position: relative;
+}
+
+.container__step img {
+  width: 100%;
+  position: absolute;
+  top: -3em;
+}
+
+.container__step-text {
+  height: 50%;
+  display: grid;
+  align-items: end;
+}
+
+.container__step-text h4 {
+  height: 100%;
+  margin: 0;
+}
+
+.container__step-text p {
+  height: 100%;
+  margin: 0;
+  font-size: var(--font-m);
+}
+
+/*--- Method –––*/
+#container__methods {
+  width: 90vw;
+  max-height: 85vh;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2em;
+}
+
+#container__methods h3 {
+  font-size: var(--font-l);
+  color: var(--green);
+  text-align: center;
+}
+
+.container__method {
+  max-height: 60vh;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  color: var(--sand-60);
+  background-color: var(--green);
+  border-radius: var(--radius-m);
+}
+
+.container__method img {
+  width: 100%;
+}
+
+.container__method h4 {
+  font-size: var(--font-xl);
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.container__method p {
+  font-size: var(--font-m);
 }

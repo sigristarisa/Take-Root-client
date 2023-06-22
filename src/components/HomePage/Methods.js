@@ -3,11 +3,11 @@ import method2 from "../../assets/method-2.png";
 
 const Methods = () => {
   return (
-    <section id='methods-container'>
+    <section id="container__methods">
       <div>
         <h3>Method 1</h3>
-        <div className='method-container'>
-          <img src={method1} alt='method-1' />
+        <div className="container__method">
+          <img src={method1} alt="method-1" />
           <div>
             <h4>Square-foot method</h4>
             <p>
@@ -21,8 +21,8 @@ const Methods = () => {
       </div>
       <div>
         <h3>Method 2</h3>
-        <div className='method-container'>
-          <img src={method2} alt='method-2' />
+        <div className="container__method">
+          <img src={method2} alt="method-2" />
           <div>
             <h4>Companion method</h4>
             <p>
