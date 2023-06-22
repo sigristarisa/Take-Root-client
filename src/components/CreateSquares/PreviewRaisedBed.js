@@ -11,6 +11,11 @@ const PreviewRaisedBed = ({ square }) => {
     return squareArr;
   };
 
+  const adjustSquareSize = () => {
+    const columns = square.column;
+    return columns > 4 ? "--small" : "";
+  };
+
   const gridTemplateColumns = {
     gridTemplateColumns: `repeat(${square.column}, 1fr)`,
   };
@@ -19,8 +24,8 @@ const PreviewRaisedBed = ({ square }) => {
     <aside className="container__preview-raised-bed">
       <ul className="container__raised-bed" style={gridTemplateColumns}>
         {createSquares().map((square, index) => (
-          <li key={index} className="container__square">
-            <div className="container__soil"></div>
+          <li key={index} className={`container__square${adjustSquareSize()}`}>
+            <div className={`container__soil${adjustSquareSize()}`}></div>
           </li>
         ))}
       </ul>

@@ -28,17 +28,17 @@ const SquaresCalculator = ({ square, setSquare, setHeaderColor }) => {
     navigate("../");
   };
   return (
-    <aside className='calculator-container'>
-      <section className='calculator-top-container'>
+    <aside className="container__calculator">
+      <section className="container__calculator--top">
         <h1>Let's get started!</h1>
-        <img src={shovel} alt='shovel icon' />
+        <img src={shovel} alt="shovel icon" />
         <p>
           Choose the size that is the closest to your raised bed. <br />
           As we are working with the square-foot method, <br />
           one square will be around 30cm / 1foot.
         </p>
         <form onSubmit={submitRaisedBed}>
-          <div className='drop-down-container'>
+          <div className="container__raised-bed-size-dropdown">
             <SizeDropDown
               label={"Length* "}
               name={"column"}
@@ -50,18 +50,17 @@ const SquaresCalculator = ({ square, setSquare, setHeaderColor }) => {
               onChange={handleSquares}
             />
           </div>
-          <div className='btn-container'>
+          <div className="container__calculator-btn ">
             <button
-              className='cancel-btn'
-              onClick={() => cancelCreateRaisedBed()}
-            >
+              className="btn__cancel"
+              onClick={() => cancelCreateRaisedBed()}>
               cancel
             </button>
-            <input className='next-step-btn' type='submit' value='Next Step' />
+            <input className="btn__next-step" type="submit" value="Next Step" />
           </div>
         </form>
       </section>
-      <div className='space'></div>
+      <div className="space"></div>
     </aside>
   );
 };
