@@ -4,17 +4,15 @@ const LoginSignupButtons = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='login-signup-btn-container'>
+    <div className="container__login-signup-btn">
       <button
-        className='login-btn'
-        onClick={() => navigate("../login", { replace: true })}
-      >
+        className="login-btn"
+        onClick={() => navigate("../login", { replace: true })}>
         Login
       </button>
       <button
-        className='signup-btn'
-        onClick={() => navigate("../signup", { replace: true })}
-      >
+        className="signup-btn"
+        onClick={() => navigate("../signup", { replace: true })}>
         Register Now
       </button>
     </div>

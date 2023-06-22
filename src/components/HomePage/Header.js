@@ -17,12 +17,11 @@ const Header = ({
   };
 
   return (
-    <header className={`login-signup-header ${headerColor}`}>
-      <div className='space'></div>
+    <header className={`header__signup-login ${headerColor}`}>
+      <div className="space"></div>
       <button
         className={`${headerColor}logo-title`}
-        onClick={() => changeHeaderNeutral()}
-      >
+        onClick={() => changeHeaderNeutral()}>
         <h1>TAKE ROOT</h1>
       </button>
       {isLoggedIn() ? (

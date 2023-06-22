@@ -29,42 +29,39 @@ const ViewRaisedBedPage = ({ setHeaderColor }) => {
   };
 
   return (
-    <main className='view-raisedbed-main'>
+    <main className="view-raisedbed-main">
       {showDelete && (
-        <div className='delete-container'>
-          <div className='delete-window'>
+        <div className="delete-container">
+          <div className="delete-window">
             <h2>Delete</h2>
             <p>Do you really want to delete this raised bed?</p>
-            <div className='delete-btn-container'>
+            <div className="delete-btn-container">
               <button
-                className='no-cancel-btn'
-                onClick={() => setShowDelete(false)}
-              >
+                className="no-cancel-btn"
+                onClick={() => setShowDelete(false)}>
                 No,cancel
               </button>
               <button
-                className='yes-delete-btn'
-                onClick={() => deleteRaisedBed()}
-              >
+                className="yes-delete-btn"
+                onClick={() => deleteRaisedBed()}>
                 Yes, delete
               </button>
             </div>
           </div>
-          <div className='delete-background'></div>
+          <div className="delete-background"></div>
         </div>
       )}
       <h1>My Planned Raised Beds</h1>
       <div>
-        <ul className='view-raisedbed-list'>
+        <ul className="view-raisedbed-list">
           <li
-            key='create-raisedbed-btn'
-            className='preview-mini-raisedbed-container create-raisedbed-btn'
+            key="create-raisedbed-btn"
+            className="preview-mini-raisedbed-container create-raisedbed-btn"
             onClick={() => {
-              setHeaderColor("header-green");
+              setHeaderColor("header__green");
               navigate("../create-raised-bed");
-            }}
-          >
-            <img src={plusLogo} alt='plus' />
+            }}>
+            <img src={plusLogo} alt="plus" />
           </li>
           {raisedBedList.map((raisedBed, index) => (
             <ViewRaisedBedListItem
@@ -79,10 +76,9 @@ const ViewRaisedBedPage = ({ setHeaderColor }) => {
         </ul>
       </div>
       <div
-        className='get-inspiration-container'
-        onClick={() => navigate("/raised-bed-gallery")}
-      >
-        <img src={inspiration} alt='light bulb' />
+        className="get-inspiration-container"
+        onClick={() => navigate("/raised-bed-gallery")}>
+        <img src={inspiration} alt="light bulb" />
         <div>
           <h2>Get Some Inspirations</h2>
           <p>

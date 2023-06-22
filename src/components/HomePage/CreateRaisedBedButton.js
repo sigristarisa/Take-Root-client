@@ -5,13 +5,13 @@ const CreateRaisedBedButton = ({ setHeaderColor }) => {
   const navigate = useNavigate();
 
   const changeHeaderGreen = () => {
-    setHeaderColor("header-green");
+    setHeaderColor("header__green");
     navigate("../create-raised-bed");
   };
 
   return (
-    <div className='create-raised-bed-btn' onClick={() => changeHeaderGreen()}>
-      <img src={snipper} alt='snipper' />
+    <div className="create-raised-bed-btn" onClick={() => changeHeaderGreen()}>
+      <img src={snipper} alt="snipper" />
       <div>
         <h2>Create New Raised Bed</h2>
         <p>You can plan your raised beds here</p>

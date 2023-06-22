@@ -25,8 +25,8 @@ const SignupPage = () => {
   };
 
   return (
-    <main className="signup-login-main">
-      <form className="signup-form" onSubmit={handleSubmit}>
+    <main className="main__signup-login">
+      <form className="form__signup" onSubmit={handleSubmit}>
         <h1>Register</h1>
         <FormInput
           label={"Choose your username*"}
@@ -60,15 +60,15 @@ const SignupPage = () => {
           placeholder={"Are you sure?"}
           handleChange={handleUserData}
         />
-        <div className="signup-btn-container">
+        <div className="container__signup-btn">
           <button
-            className="signup-later-btn"
+            className="btn__signup-later"
             type="button"
             onClick={() => navigate("../login", { replace: true })}>
             Or login
           </button>
           <input
-            className="signup-submit-btn"
+            className="btn__signup-submit"
             type="submit"
             value="Register now"
           />

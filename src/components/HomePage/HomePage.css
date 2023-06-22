@@ -1,4 +1,4 @@
-main {
+.main__homepage {
   background-color: var(--sand-20);
   display: grid;
   place-items: center;
