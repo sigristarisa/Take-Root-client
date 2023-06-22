@@ -6,12 +6,12 @@ const LoginSignupButtons = () => {
   return (
     <div className="container__login-signup-btn">
       <button
-        className="login-btn"
+        className="btn__login"
         onClick={() => navigate("../login", { replace: true })}>
         Login
       </button>
       <button
-        className="signup-btn"
+        className="btn__signup"
         onClick={() => navigate("../signup", { replace: true })}>
         Register Now
       </button>

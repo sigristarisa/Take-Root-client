@@ -13,14 +13,14 @@ const UserButton = ({ initialUserState }) => {
   };
 
   return (
-    <div className='login-signup-btn-container'>
-      <button className='login-btn' onClick={() => handleLogout()}>
+    <div className="container__login-signup-btn">
+      <button className="btn__login" onClick={() => handleLogout()}>
         Logout
       </button>
-      <button className='user-btn'>
+      <button className="btn__user">
         <img
           src={`${process.env.REACT_APP_API_URL}${user.userImage}`}
-          alt='user default'
+          alt="user default"
         />
       </button>
     </div>
