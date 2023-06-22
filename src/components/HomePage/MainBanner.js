@@ -7,9 +7,9 @@ const MainBanner = ({ isLoggedIn }) => {
   const { user } = useContext(userContext);
   const navigate = useNavigate();
   return (
-    <section className='main-container'>
-      <img src={mainImage} alt='main icon' />
-      <div className='main-text-container'>
+    <section className="main-banner">
+      <img src={mainImage} alt="main icon" />
+      <div>
         {isLoggedIn() ? (
           <h1>
             Welcome <br />
@@ -26,13 +26,12 @@ const MainBanner = ({ isLoggedIn }) => {
         <div>
           {!isLoggedIn() && (
             <button
-              className='lets-get-started-btn'
-              onClick={() => navigate("../signup")}
-            >
+              className="lets-get-started-btn"
+              onClick={() => navigate("../signup")}>
               Let's get started
             </button>
           )}
-          <a className='what-methods-btn' href='#methods-container'>
+          <a className="what-methods-btn" href="#methods-container">
             What methods?
           </a>
         </div>

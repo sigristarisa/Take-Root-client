@@ -1,11 +1,12 @@
-.home-page-main {
+main {
   background-color: var(--sand-20);
   display: grid;
   place-items: center;
   gap: 6em;
 }
 
-.main-container {
+/*--- Main Banner ---*/
+.main-banner {
   width: 90vw;
   max-height: 65vh;
   padding: 1em;
@@ -17,21 +18,47 @@
   border-radius: var(--radius-m);
 }
 
-.main-container img {
+.main-banner img {
   width: 80%;
-  height: auto;
 }
 
-.main-container h1 {
+.main-banner h1 {
   font-size: var(--font-xxl);
   line-height: 1.2em;
   margin-bottom: 0;
 }
 
-.main-container h2 {
+.main-banner h2 {
   font-weight: 400;
   font-size: var(--font-l);
   line-height: 1.2em;
+}
+
+.lets-get-started-btn {
+  width: 10vw;
+  height: 4vh;
+  margin-right: 16px;
+  font-size: var(--font-s);
+  color: var(--sand-20);
+  background-color: var(--grape-100);
+  border-radius: var(--radius-s);
+  border: none;
+}
+
+.lets-get-started-btn:hover {
+  background-color: var(--grape-hover);
+}
+
+.what-methods-btn {
+  font-size: var(--font-s);
+  color: var(--grape-100);
+  background-color: transparent;
+  text-decoration: underline;
+  border: none;
+}
+
+.what-methods-btn:hover {
+  color: var(--grape-hover);
 }
 
 .raised-bed-btn-container {
@@ -48,6 +75,7 @@
   height: auto;
 }
 
+/*--- How It Works */
 .how-it-works-container {
   width: 100vw;
   min-height: 60vh;
@@ -71,27 +99,34 @@
 
 .step-container {
   width: 20vw;
-  height: 30vh;
+  height: 35vh;
   padding: 3em;
   background-color: var(--sand-60);
   border-radius: var(--radius-m);
   display: grid;
-  place-items: center;
+  place-items: end;
   position: relative;
 }
 
 .step-container img {
-  height: 80%;
+  width: 100%;
   position: absolute;
-  top: -6em;
+  top: -3em;
 }
 
-.step-text h4 {
-  margin-top: var(--font-xl);
-  margin-bottom: 0;
+.step-container__text {
+  height: 50%;
+  display: grid;
+  align-items: end;
 }
 
-.step-text p {
+.step-container__text h4 {
+  height: 100%;
+  margin: 0;
+}
+
+.step-container__text p {
+  height: 100%;
   margin: 0;
   font-size: var(--font-m);
 }
@@ -158,31 +193,4 @@
 .view-raised-bed-btn h2 {
   font-size: var(--font-xl);
   line-height: 1.5em;
-}
-
-.lets-get-started-btn {
-  width: 10vw;
-  height: 4vh;
-  margin-right: 16px;
-  font-size: var(--font-s);
-  color: var(--sand-20);
-  background-color: var(--grape-100);
-  border-radius: var(--radius-s);
-  border: none;
-}
-
-.lets-get-started-btn:hover {
-  background-color: var(--grape-hover);
-}
-
-.what-methods-btn {
-  font-size: var(--font-s);
-  color: var(--grape-100);
-  background-color: transparent;
-  text-decoration: underline;
-  border: none;
-}
-
-.what-methods-btn:hover {
-  color: var(--grape-hover);
 }

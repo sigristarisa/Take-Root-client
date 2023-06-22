@@ -7,10 +7,10 @@ import "./HomePage.css";
 
 const HomePage = ({ isLoggedIn, setHeaderColor }) => {
   return (
-    <main className='home-page-main'>
+    <main>
       <MainBanner isLoggedIn={isLoggedIn} />
       {isLoggedIn() && (
-        <section className='raised-bed-btn-container'>
+        <section className="raised-bed-btn-container">
           <CreateRaisedBedButton setHeaderColor={setHeaderColor} />
           <ViewRaisedBedButton />
         </section>
