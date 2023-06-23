@@ -16,18 +16,18 @@ const DesignRaisedBed = ({ squareId, setSquareId, isSet, notClickable }) => {
   };
 
   return (
-    <aside className='preview-container'>
+    <aside className="container__preview">
       {isSet(raisedBed) && (
         <ul
-          className={`raised-bed-container ${notClickable}`}
-          style={getColumns(raisedBed)}
-        >
+          className={`container__raised-bed ${notClickable}`}
+          style={getColumns(raisedBed)}>
           {raisedBed.raisedBed.square.map((square, index) => (
             <SquareListItem
               square={square}
               index={index}
               squareId={squareId}
               setSquareId={setSquareId}
+              columns={raisedBed.raisedBed.columns}
             />
           ))}
         </ul>

@@ -30,7 +30,7 @@ const PlantLibraryItem = ({ plant, key, companionData, isSet }) => {
   };
 
   return (
-    <li key={key} className='plant-library-list-item'>
+    <li key={key} className="list-item__plant-library">
       <img
         className={`${isCompanion(plant.id)}`}
         src={`${process.env.REACT_APP_API_URL}${plant.image}`}
@@ -38,9 +38,9 @@ const PlantLibraryItem = ({ plant, key, companionData, isSet }) => {
         onDragStart={(e) => dragStart(e, plant.id)}
         draggable
       />
-      <div className='plant-text-container'>
+      <div className="container__plant-text">
         <p>{plant.name}</p>
-        <p className={`plant-${isCompanion(plant.id)}text`}>
+        <p className={`text__plant-${isCompanion(plant.id)}`}>
           {renderCompanionText(plant.id)}
         </p>
       </div>

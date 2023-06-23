@@ -20,7 +20,7 @@ const PlantLibrary = ({ squareId, isSet }) => {
 
   return (
     <aside>
-      <ul className='plant-library-list'>
+      <ul className="list__plant-library">
         {plants.map((plant, index) => (
           <PlantLibraryItem
             plant={plant}

@@ -2,7 +2,6 @@ import { useState } from "react";
 import DesignRaisedBed from "./DesignRaisedBed";
 import PreviewPlantLibrary from "./PreviewPlantLibrary";
 import NameRaisedBed from "./NameRaisedBed";
-
 import "./DesignRaisedBedPage.css";
 
 const DesignRaisedBedPage = ({ setHeaderColor }) => {
@@ -28,11 +27,11 @@ const DesignRaisedBedPage = ({ setHeaderColor }) => {
   };
 
   return (
-    <main className='design-raisedbed-page-main'>
+    <main className="main__design-raised-bed">
       {isSubmitted && (
-        <div className='saved-container'>
+        <div className="saved-container">
           <h1>Saved!</h1>
-          <div className='saved-container-background'></div>
+          <div className="saved-container-background"></div>
         </div>
       )}
       <DesignRaisedBed

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { raisedBedContext } from "../../helpers/createContext";
 import client from "../../helpers/client";
 
-const SquareListItem = ({ square, index, squareId, setSquareId }) => {
+const SquareListItem = ({ square, index, squareId, setSquareId, columns }) => {
   const { raisedBed, setRaisedBed } = useContext(raisedBedContext);
 
   const drop = (e) => {
@@ -15,27 +15,29 @@ const SquareListItem = ({ square, index, squareId, setSquareId }) => {
     });
   };
 
-  const highlightClickedSquare = (clickedSquareId) => {
-    return clickedSquareId === squareId ? "clicked" : "";
-  };
+  const highlightClickedSquare = (clickedSquareId) =>
+    clickedSquareId === squareId ? "container__square--clicked" : "";
+
+  const adjustSquareSize = () => (columns > 4 ? "--small" : "");
+  console.log("column number", columns);
+  console.log("adjust square size", adjustSquareSize());
 
   return (
     <li
       key={index}
-      className={`square-container square-list-item ${highlightClickedSquare(
+      className={`container__square--preview${adjustSquareSize()} ${highlightClickedSquare(
         square.id
       )}`}
       onClick={() => setSquareId(square.id)}
       onDrop={(e) => drop(e)}
-      onDragOver={(e) => e.preventDefault()}
-    >
+      onDragOver={(e) => e.preventDefault()}>
       {square.plantId ? (
         <img
           src={`${process.env.REACT_APP_API_URL}${square.plant.imagePerSquare}`}
           alt={`${square.plant.name} per square`}
         />
       ) : (
-        <div className='soil-container'></div>
+        <div className={`container__soil${adjustSquareSize()}`}></div>
       )}
     </li>
   );

@@ -9,10 +9,10 @@ const PreviewPlantLibrary = ({
   saveRaisedBed,
 }) => {
   return (
-    <aside className='preview-plant-library-container'>
-      <div className='plant-library-text'>
+    <aside className="container__plant-library">
+      <div className="container__plant-library-text">
         <h1>Plant Library</h1>
-        <img src={shovel} alt='shovel icon' />
+        <img src={shovel} alt="shovel icon" />
         <p>
           Click a square and drag your plant of choice.
           <br />
