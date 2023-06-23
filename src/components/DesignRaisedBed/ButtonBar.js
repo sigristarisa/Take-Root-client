@@ -13,11 +13,11 @@ const ButtonBar = ({ saveRaisedBed, setSquareId }) => {
   };
 
   return (
-    <div className='plant-btn-container'>
-      <button className='clear-square-btn' onClick={() => deleteSquares()}>
+    <div className="container__plant-btn">
+      <button className="btn__clear-square" onClick={() => deleteSquares()}>
         Clear all squares
       </button>
-      <button className='save-btn' onClick={() => saveRaisedBed()}>
+      <button className="btn__save" onClick={() => saveRaisedBed()}>
         Save
       </button>
     </div>

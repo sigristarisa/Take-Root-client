@@ -27,30 +27,30 @@ const NameRaisedBed = ({ editRaisedBed, setIsSubmitted, setHeaderColor }) => {
   };
 
   return (
-    <aside className='name-raisedbed-container'>
+    <aside className="container__name-raised-bed">
       <form onSubmit={submitRaisedBedName}>
         <h1>Save</h1>
-        <div className='drop-down'>
+        <div className="container__name-raised-bed-input">
           <label>My raised bed name*</label>
           <input
-            className='name-input'
-            type='text'
-            name='name'
+            className="input__name-raised-bed"
+            type="text"
+            name="name"
             value={raisedBedName.name}
             onChange={handleRaisedBedName}
-            placeholder='
-          Mediterranean Garden'
+            placeholder="
+          Mediterranean Garden"
             required
           />
         </div>
-        <div className='btn-container'>
-          <button className='keep-edit-btn' onClick={() => editRaisedBed()}>
+        <div className="container__plant-btn">
+          <button className="btn__keep-edit" onClick={() => editRaisedBed()}>
             Keep editing
           </button>
-          <input className='save-btn' type='submit' value='Save' />
+          <input className="btn__save" type="submit" value="Save" />
         </div>
       </form>
-      <div className='space'></div>
+      <div className="space"></div>
     </aside>
   );
 };

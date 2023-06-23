@@ -29,9 +29,9 @@ const DesignRaisedBedPage = ({ setHeaderColor }) => {
   return (
     <main className="main__design-raised-bed">
       {isSubmitted && (
-        <div className="saved-container">
+        <div className="container__saved">
           <h1>Saved!</h1>
-          <div className="saved-container-background"></div>
+          <div className="container__saved-bg"></div>
         </div>
       )}
       <DesignRaisedBed
