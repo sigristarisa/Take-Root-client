@@ -13,7 +13,8 @@ const PreviewRaisedBed = ({ square }) => {
 
   const adjustSquareSize = () => {
     const columns = square.column;
-    return columns > 4 ? "--small" : "";
+    const rows = square.row;
+    return columns > 4 || rows > 4 ? "--small" : "";
   };
 
   const gridTemplateColumns = {

@@ -28,6 +28,7 @@ const DesignRaisedBed = ({ squareId, setSquareId, isSet, notClickable }) => {
               squareId={squareId}
               setSquareId={setSquareId}
               columns={raisedBed.raisedBed.columns}
+              rows={raisedBed.raisedBed.rows}
             />
           ))}
         </ul>

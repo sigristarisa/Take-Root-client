@@ -2,7 +2,14 @@ import { useContext } from "react";
 import { raisedBedContext } from "../../helpers/createContext";
 import client from "../../helpers/client";
 
-const SquareListItem = ({ square, index, squareId, setSquareId, columns }) => {
+const SquareListItem = ({
+  square,
+  index,
+  squareId,
+  setSquareId,
+  columns,
+  rows,
+}) => {
   const { raisedBed, setRaisedBed } = useContext(raisedBedContext);
 
   const drop = (e) => {
@@ -18,9 +25,7 @@ const SquareListItem = ({ square, index, squareId, setSquareId, columns }) => {
   const highlightClickedSquare = (clickedSquareId) =>
     clickedSquareId === squareId ? "container__square--clicked" : "";
 
-  const adjustSquareSize = () => (columns > 4 ? "--small" : "");
-  console.log("column number", columns);
-  console.log("adjust square size", adjustSquareSize());
+  const adjustSquareSize = () => (columns > 4 || rows > 4 ? "--small" : "");
 
   return (
     <li
