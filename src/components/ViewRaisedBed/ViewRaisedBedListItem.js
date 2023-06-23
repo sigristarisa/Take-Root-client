@@ -16,8 +16,8 @@ const ViewRaisedBedListItem = ({
         setShowDelete={setShowDelete}
         setConfirmDelete={setConfirmDelete}
       />
-      <p className='date-text'>{formatDate(raisedBed.createdAt)}</p>
-      <p className='name-text'>{raisedBed.name}</p>
+      <p className="text__date">{formatDate(raisedBed.createdAt)}</p>
+      <p className="text__raised-bed-name">{raisedBed.name}</p>
     </li>
   );
 };

@@ -18,18 +18,18 @@ const MinitureRaisedBed = ({
   };
 
   return (
-    <div className='preview-mini-raisedbed-container'>
-      <div className='mini-raisedbed-container' style={gridTemplateColumns}>
+    <div className="container__preview-mini-raised-bed">
+      <div className="container__mini-raised-bed" style={gridTemplateColumns}>
         {raisedBed.square.map((square, index) => (
-          <div className='mini-square-container' key={index}>
+          <div className="container__mini-square" key={index}>
             {square.plant ? (
               <img
-                className='miniture-plant-container'
+                className="container__mini-plant"
                 src={`${process.env.REACT_APP_API_URL}${square.plant.imagePerSquare}`}
                 alt={`miniture ${square.plant.name}`}
               />
             ) : (
-              <div className='miniture-soil-container'></div>
+              <div className="container__mini-soil"></div>
             )}
           </div>
         ))}
@@ -37,9 +37,8 @@ const MinitureRaisedBed = ({
       {!isInspiration && (
         <button
           onClick={() => renderDeleteWindow(raisedBed.id)}
-          className='delete-btn'
-        >
-          <img src={deleteIcon} alt='delete-icon' />
+          className="btn__delete-raised-bed">
+          <img src={deleteIcon} alt="delete-icon" />
         </button>
       )}
     </div>

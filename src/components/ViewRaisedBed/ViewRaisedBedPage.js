@@ -29,34 +29,32 @@ const ViewRaisedBedPage = ({ setHeaderColor }) => {
   };
 
   return (
-    <main className="view-raisedbed-main">
+    <main className="main__view-raised-bed">
       {showDelete && (
-        <div className="delete-container">
-          <div className="delete-window">
+        <div className="container__delete">
+          <div className="popup__delete">
             <h2>Delete</h2>
             <p>Do you really want to delete this raised bed?</p>
-            <div className="delete-btn-container">
+            <div className="container__delete-btn">
               <button
-                className="no-cancel-btn"
+                className="btn__dont-delete"
                 onClick={() => setShowDelete(false)}>
                 No,cancel
               </button>
-              <button
-                className="yes-delete-btn"
-                onClick={() => deleteRaisedBed()}>
+              <button className="btn__delete" onClick={() => deleteRaisedBed()}>
                 Yes, delete
               </button>
             </div>
           </div>
-          <div className="delete-background"></div>
+          <div className="bg__delete"></div>
         </div>
       )}
       <h1>My Planned Raised Beds</h1>
       <div>
-        <ul className="view-raisedbed-list">
+        <ul className="list__view-raised-bed">
           <li
-            key="create-raisedbed-btn"
-            className="preview-mini-raisedbed-container create-raisedbed-btn"
+            key="create-raised-bed-btn"
+            className="container__preview-mini-raised-bed btn__preview-create-raised-bed"
             onClick={() => {
               setHeaderColor("header__green");
               navigate("../create-raised-bed");
@@ -76,7 +74,7 @@ const ViewRaisedBedPage = ({ setHeaderColor }) => {
         </ul>
       </div>
       <div
-        className="get-inspiration-container"
+        className="container__get-inspiration"
         onClick={() => navigate("/raised-bed-gallery")}>
         <img src={inspiration} alt="light bulb" />
         <div>

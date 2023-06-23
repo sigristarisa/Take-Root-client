@@ -1,11 +1,11 @@
-.view-raisedbed-main {
+.main__view-raised-bed {
   color: var(--green);
   background-color: var(--sand-20);
   display: grid;
   place-items: center;
 }
 
-.view-raisedbed-list {
+.list__view-raised-bed {
   width: 70vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -14,23 +14,25 @@
   position: relative;
 }
 
-.preview-mini-raisedbed-container {
+.container__preview-mini-raised-bed {
   width: 20vw;
   height: 40vh;
+  padding: 20px;
   margin-bottom: 20px;
   background-color: white;
   border-radius: 12px;
   display: grid;
   place-items: center;
   position: relative;
+  overflow: scroll;
 }
 
-.mini-raisedbed-container {
+.container__mini-raised-bed {
   display: grid;
   place-items: center;
 }
 
-.mini-square-container {
+.container__mini-square {
   width: 64px;
   height: 64px;
   border: black dotted 1px;
@@ -38,39 +40,39 @@
   place-items: center;
 }
 
-.miniture-plant-container {
+.container__mini-plant {
   width: 56px;
   height: 56px;
 }
 
-.miniture-soil-container {
+.container__mini-soil {
   width: 48px;
   height: 48px;
   background-color: var(--sand-60);
   border-radius: 12px;
 }
 
-.create-raisedbed-btn {
+.btn__preview-create-raised-bed {
   margin-bottom: 40px;
   background-color: var(--sand-60);
   cursor: pointer;
 }
 
-.date-text {
+.text__date {
   margin: 0;
   font-size: var(--font-xs);
 }
 
-.name-text {
+.text__raised-bed-name {
   margin: 0;
 }
 
-.user-name-text {
+.text__user-name {
   margin: 0;
   font-size: var(--font-xs);
 }
 
-.delete-btn {
+.btn__delete-raised-bed {
   width: 32px;
   height: 32px;
   background-color: transparent;
@@ -80,17 +82,17 @@
   right: 20px;
 }
 
-.delete-btn img {
+.btn__delete-raised-bed img {
   width: 32px;
   height: 32px;
 }
 
-.delete-container {
+.container__delete {
   display: grid;
   place-items: center;
 }
 
-.delete-background {
+.bg__delete {
   width: 100%;
   min-height: 100%;
   overflow: scroll;
@@ -104,7 +106,7 @@
   z-index: 1;
 }
 
-.delete-window {
+.popup__delete {
   width: 20vw;
   height: 30vh;
   padding: 2em;
@@ -117,29 +119,29 @@
   border-radius: var(--radius-m);
 }
 
-.delete-window h2 {
+.popup__delete h2 {
   margin: 0;
   font-size: var(--font-l);
 }
 
-.delete-btn-container {
+.container__delete-btn {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2em;
 }
 
-.no-cancel-btn {
+.btn__dont-delete {
   color: var(--grape-100);
   background-color: transparent;
   border: none;
   text-decoration: underline;
 }
 
-.no-cancel-btn {
+.btn__dont-delete:hover {
   color: var(--grape-hover);
 }
 
-.yes-delete-btn {
+.btn__delete {
   width: 10vw;
   height: 4vh;
   color: var(--sand-20);
@@ -148,11 +150,11 @@
   border-radius: var(--radius-s);
 }
 
-.yes-delete-btn:hover {
+.btn__delete:hover {
   background-color: var(--grape-hover);
 }
 
-.get-inspiration-container {
+.container__get-inspiration {
   width: 70vw;
   padding: 2em;
   margin-top: 3em;
@@ -165,17 +167,17 @@
   cursor: pointer;
 }
 
-.get-inspiration-container h2 {
+.container__get-inspiration h2 {
   font-size: 2.5em;
   line-height: 1.5em;
 }
 
-.get-inspiration-container p {
+.container__get-inspiration p {
   font-size: var(--font-m);
   line-height: 1.5em;
 }
 
-.get-inspiration-container img {
+.container__get-inspiration img {
   width: 240px;
   height: 280px;
 }

@@ -17,20 +17,19 @@ const RaisedBedGalleryPage = () => {
   }, []);
 
   return (
-    <main className='view-raisedbed-main'>
+    <main className="main__view-raised-bed">
       <h1>Inspirations</h1>
       <div>
-        <ul className='view-raisedbed-list'>
+        <ul className="list__view-raised-bed">
           {inspirations.map((inspiration, index) => (
             <RaisedBedGalleryItem inspiration={inspiration} key={index} />
           ))}
         </ul>
       </div>
       <div
-        className='get-inspiration-container'
-        onClick={() => navigate("/view-raised-bed")}
-      >
-        <img src={telescope} alt='light bulb' />
+        className="container__get-inspiration"
+        onClick={() => navigate("/view-raised-bed")}>
+        <img src={telescope} alt="light bulb" />
         <div>
           <h2>View My Creations</h2>
           <p>
