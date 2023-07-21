@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { userContext } from "../../helpers/createContext";
 import client from "../../helpers/client";
@@ -7,6 +7,7 @@ import "./Signup.css";
 
 const SignupPage = () => {
   const { user, setUser } = useContext(userContext);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleUserData = (e) => {
@@ -16,18 +17,26 @@ const SignupPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    client.post("/user/signup", user, false).then((res) => {
-      localStorage.setItem("user", JSON.stringify(res.data));
-      localStorage.setItem("token", res.data.token);
-      setUser(res.data);
-      navigate("../", { replace: true });
-    });
+    client
+      .post("/user/signup", user, false)
+      .then((res) => {
+        localStorage.setItem("user", JSON.stringify(res.data));
+        localStorage.setItem("token", res.data.token);
+        console.log("hello", res.data);
+        setUser(res.data);
+
+        // navigate("../", { replace: true });
+      })
+      .catch((error) => {
+        setError(error.response.data.error);
+      });
   };
 
   return (
     <main className="main__signup-login">
       <form className="form__signup" onSubmit={handleSubmit}>
         <h1>Register</h1>
+        {error && <div>{error}</div>}
         <FormInput
           label={"Choose your username*"}
           name={"userName"}
