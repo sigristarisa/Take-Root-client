@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { userContext, raisedBedContext } from "./helpers/createContext";
+import {
+  userContext,
+  raisedBedContext,
+  initialUserState,
+} from "./helpers/createContext";
 import Header from "./components/HomePage/Header";
 import HomePage from "./components/HomePage/HomePage";
 import SignupPage from "./components/SignUp/SignUpPage";
@@ -13,13 +17,6 @@ import Footer from "./components/HomePage/Footer";
 import "./App.css";
 
 function App() {
-  const initialUserState = {
-    userName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  };
-
   const [user, setUser] = useState(initialUserState);
   const [raisedBed, setRaisedBed] = useState({});
   const [headerColor, setHeaderColor] = useState("");
@@ -42,7 +39,7 @@ function App() {
   return (
     <userContext.Provider value={{ user, setUser }}>
       <raisedBedContext.Provider value={{ raisedBed, setRaisedBed }}>
-        <div className='App'>
+        <div className="App">
           <Header
             isLoggedIn={isLoggedIn}
             initialUserState={initialUserState}

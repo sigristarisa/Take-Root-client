@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { userContext } from "../../helpers/createContext";
+import { userContext, initialUserState } from "../../helpers/createContext";
 import client from "../../helpers/client";
 import FormInput from "./FormInput";
 import "./Signup.css";
@@ -24,11 +24,10 @@ const SignupPage = () => {
         localStorage.setItem("token", res.data.token);
         console.log("hello", res.data);
         setUser(res.data);
-
-        // navigate("../", { replace: true });
       })
       .catch((error) => {
         setError(error.response.data.error);
+        setUser(initialUserState);
       });
   };
 
@@ -36,7 +35,7 @@ const SignupPage = () => {
     <main className="main__signup-login">
       <form className="form__signup" onSubmit={handleSubmit}>
         <h1>Register</h1>
-        {error && <div>{error}</div>}
+        {error && <div className="form__error">{error}</div>}
         <FormInput
           label={"Choose your username*"}
           name={"userName"}

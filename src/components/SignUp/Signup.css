@@ -21,6 +21,10 @@
   height: 40vh;
 }
 
+.form__error {
+  color: var(--carrot);
+}
+
 .container__form-input {
   width: 100%;
 }
