@@ -22,11 +22,11 @@ const SignupPage = () => {
       .then((res) => {
         localStorage.setItem("user", JSON.stringify(res.data));
         localStorage.setItem("token", res.data.token);
-        console.log("hello", res.data);
         setUser(res.data);
       })
       .catch((error) => {
-        setError(error.response.data.error);
+        console.log("error", error.response);
+        error.response.data.error.forEach((e) => setError(e));
         setUser(initialUserState);
       });
   };

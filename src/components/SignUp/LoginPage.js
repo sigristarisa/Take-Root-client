@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { userContext } from "../../helpers/createContext";
+import { userContext, initialUserState } from "../../helpers/createContext";
 import client from "../../helpers/client";
 import FormInput from "./FormInput";
 import "./Signup.css";
 
 const LoginPage = () => {
   const { user, setUser } = useContext(userContext);
+  const [error, setError] = useState("");
+
   const navigate = useNavigate();
 
   const handleUserData = (e) => {
@@ -16,18 +18,25 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    client.post("/user/login", user, false).then((res) => {
-      localStorage.setItem("user", JSON.stringify(res.data));
-      localStorage.setItem("token", res.data.token);
-      setUser(res.data);
-      navigate("../", { replace: true });
-    });
+    client
+      .post("/user/login", user, false)
+      .then((res) => {
+        localStorage.setItem("user", JSON.stringify(res.data));
+        localStorage.setItem("token", res.data.token);
+        setUser(res.data);
+        navigate("../", { replace: true });
+      })
+      .catch((error) => {
+        setError(error.response.data.error);
+        setUser(initialUserState);
+      });
   };
 
   return (
     <main className="main__signup-login">
       <form onSubmit={handleSubmit} className="form__login">
         <h1>Login</h1>
+        {error && <div className="form__error">{error}</div>}
         <FormInput
           label={"Email address*"}
           name={"email"}
