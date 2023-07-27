@@ -23,6 +23,7 @@ const SignupPage = () => {
         localStorage.setItem("user", JSON.stringify(res.data));
         localStorage.setItem("token", res.data.token);
         setUser(res.data);
+        navigate("../");
       })
       .catch((error) => {
         console.log("error", error.response);
